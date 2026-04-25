@@ -47,6 +47,11 @@
       .destination-image { width: 100%; height: 240px; object-fit: cover; display: block; }
       .destination-body, .blog-body, .review-body { padding: 20px; }
       .explore-link { display: inline-flex; align-items: center; justify-content: center; margin-top: 14px; padding: 12px 18px; border-radius: 16px; background: #fbbf24; color: #111827; font-weight: 700; text-decoration: none; }
+      .blog-tile { text-decoration: none; color: inherit; transition: transform 180ms ease, box-shadow 180ms ease; }
+      .blog-tile:hover { transform: translateY(-6px); box-shadow: 0 20px 42px rgba(15, 23, 42, 0.14); }
+      .blog-body strong { display: block; font-size: 26px; }
+      .blog-body p { color: #475569; line-height: 1.7; }
+      .blog-read { display: inline-flex; margin-top: 14px; color: #b45309; font-size: 14px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
       .section-dark { background: linear-gradient(135deg, #0f172a, #1d4ed8); color: white; }
       .section-cta { background: linear-gradient(135deg, #b45309, #f59e0b); color: white; text-align: center; }
       .footer { background: #0f172a; color: white; }
@@ -143,9 +148,27 @@
     <section class="section">
       <h3>Travel Blog</h3>
       <div class="blog-grid">
-        <div class="blog-tile"><div class="blog-body"><strong>Best Time to Visit Gulmarg</strong><p>Read seasonal travel tips, weather ideas and local planning advice.</p></div></div>
-        <div class="blog-tile"><div class="blog-body"><strong>Top 10 Things in Srinagar</strong><p>Houseboats, gardens, food, shopping and scenic local experiences.</p></div></div>
-        <div class="blog-tile"><div class="blog-body"><strong>Why Kashmir is Paradise</strong><p>Discover what makes the valley unforgettable for couples and families.</p></div></div>
+        <a class="blog-tile" href="./blog.html?post=gulmarg-best-time">
+          <div class="blog-body">
+            <strong>Best Time to Visit Gulmarg</strong>
+            <p>Read seasonal travel tips, weather ideas and local planning advice.</p>
+            <span class="blog-read">Read Photo Guide</span>
+          </div>
+        </a>
+        <a class="blog-tile" href="./blog.html?post=top-10-srinagar">
+          <div class="blog-body">
+            <strong>Top 10 Things in Srinagar</strong>
+            <p>Houseboats, gardens, food, shopping and scenic local experiences.</p>
+            <span class="blog-read">Read Photo Guide</span>
+          </div>
+        </a>
+        <a class="blog-tile" href="./blog.html?post=why-kashmir-is-paradise">
+          <div class="blog-body">
+            <strong>Why Kashmir is Paradise</strong>
+            <p>Discover what makes the valley unforgettable for couples and families.</p>
+            <span class="blog-read">Read Photo Guide</span>
+          </div>
+        </a>
       </div>
     </section>
     <section class="section-cta">
