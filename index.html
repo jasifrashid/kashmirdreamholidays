@@ -41,6 +41,9 @@
       .card { padding: 24px; }
       .card strong { display: block; font-size: 22px; }
       .card small { display: block; margin-top: 8px; color: #64748b; }
+      .package-card { text-decoration: none; color: inherit; transition: transform 180ms ease, box-shadow 180ms ease; }
+      .package-card:hover { transform: translateY(-6px); box-shadow: 0 20px 42px rgba(15, 23, 42, 0.14); }
+      .package-card .card-read { display: inline-flex; margin-top: 16px; color: #b45309; font-size: 14px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
       .hero-photo { width: 100%; height: 420px; border-radius: 28px; object-fit: cover; box-shadow: 0 18px 38px rgba(15, 23, 42, 0.16); }
       .feature-tile { padding: 22px; text-align: center; font-weight: 700; }
       .destination-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
@@ -70,7 +73,7 @@
       <div class="overlay"></div>
       <div class="shell">
         <div class="topbar">
-          <button class="book-btn">Book Now</button>
+          <a class="book-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSctE_XDyeYFs6x9nW6j-Ees9UhIF3xEDHJfWsuK7nmsa8OHKw/viewform?usp=preview" target="_blank" rel="noopener noreferrer">Book Now</a>
         </div>
         <div class="hero-grid">
           <div class="hero-copy">
@@ -94,15 +97,30 @@
             <a class="ghost-btn" href="https://wa.me/917006886108" target="_blank" rel="noopener noreferrer" style="color:#0f172a;border-color:#cbd5e1;background:#fff;">WhatsApp Us</a>
           </div>
         </div>
-        <img class="hero-photo" src="https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?auto=format&fit=crop&w=1200&q=80" alt="Dal Lake" />
+        <img class="hero-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shikara%20Dal%20Lake.jpg" alt="Dal Lake Srinagar shikara" />
       </div>
     </section>
     <section class="section">
       <h3>Popular Packages</h3>
       <div class="cards">
-        <div class="card"><strong>Romantic Kashmir</strong><small>4N / 5D</small><p>Srinagar - Gulmarg - Pahalgam</p></div>
-        <div class="card"><strong>Family Fun Tour</strong><small>5N / 6D</small><p>Dal Lake - Sonamarg - Gulmarg</p></div>
-        <div class="card"><strong>Snow Adventure</strong><small>3N / 4D</small><p>Winter Gulmarg Experience</p></div>
+        <a class="card package-card" href="./package.html?plan=romantic-kashmir">
+          <strong>Romantic Kashmir</strong>
+          <small>4N / 5D</small>
+          <p>Dal Lake - Nishat Shalimar - Gulmarg - Pahalgam</p>
+          <span class="card-read">Open Day Plan</span>
+        </a>
+        <a class="card package-card" href="./package.html?plan=family-fun-tour">
+          <strong>Family Fun Tour</strong>
+          <small>5N / 6D</small>
+          <p>Dal Lake - Sonmarg - Gulmarg - Kokarnag Circuit</p>
+          <span class="card-read">Open Day Plan</span>
+        </a>
+        <a class="card package-card" href="./package.html?plan=snow-adventure">
+          <strong>Snow Adventure</strong>
+          <small>3N / 4D</small>
+          <p>Dal Lake - Gulmarg - Aharbal - Peer Ki Gali</p>
+          <span class="card-read">Open Day Plan</span>
+        </a>
       </div>
     </section>
     <section class="section">
@@ -118,7 +136,7 @@
       <h3>Explore Every Destination</h3>
       <div class="destination-grid">
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1626621341517-bbf3d9990dbf?auto=format&fit=crop&w=900&q=80" alt="Pahalgam" />
+          <img class="destination-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pahalgam%2C%20Kashmir.jpg" alt="Pahalgam Kashmir" />
           <div class="destination-body"><strong style="font-size:28px;">Pahalgam</strong><p>Experience the beauty, culture and unforgettable views of Pahalgam.</p><a class="explore-link" href="./destination.html?destination=Pahalgam">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
@@ -126,7 +144,7 @@
           <div class="destination-body"><strong style="font-size:28px;">Gulmarg</strong><p>Snow adventures, premium stays and breathtaking mountain scenery.</p><a class="explore-link" href="./destination.html?destination=Gulmarg">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=900&q=80" alt="Nishat Garden" />
+          <img class="destination-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nishat%20Bagh%2C%20Srinagar.jpg" alt="Nishat Garden Srinagar" />
           <div class="destination-body"><strong style="font-size:28px;">Nishat Garden</strong><p>Elegant Mughal charm with peaceful views and timeless beauty.</p><a class="explore-link" href="./destination.html?destination=Nishat%20Garden">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
@@ -175,7 +193,7 @@
       <div class="section">
         <h3 style="font-size:44px;margin-bottom:10px;">Ready For Your Dream Holiday?</h3>
         <p style="max-width:none;color:white;">Book your Kashmir trip today with premium local support.</p>
-        <div class="cta-row" style="justify-content:center;"><button class="book-btn">Book Now</button></div>
+        <div class="cta-row" style="justify-content:center;"><a class="book-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSctE_XDyeYFs6x9nW6j-Ees9UhIF3xEDHJfWsuK7nmsa8OHKw/viewform?usp=preview" target="_blank" rel="noopener noreferrer">Book Now</a></div>
       </div>
     </section>
     <footer class="footer">

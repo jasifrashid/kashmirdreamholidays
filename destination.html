@@ -8,7 +8,7 @@
       :root { --gold-1: #fff7cf; --gold-2: #f8dc88; --gold-3: #d7a62b; --gold-4: #a76f00; --page-width: min(1280px, calc(100% - 32px)); --bg: #f8fafc; --ink: #0f172a; }
       * { box-sizing: border-box; }
       body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Segoe UI", sans-serif; }
-      .hero { position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(2, 6, 23, 0.96), rgba(30, 41, 59, 0.92)), url("https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?auto=format&fit=crop&w=1600&q=80") center/cover; color: white; }
+      .hero { position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(2, 6, 23, 0.96), rgba(30, 41, 59, 0.92)), url("https://commons.wikimedia.org/wiki/Special:FilePath/Shikara%20Dal%20Lake.jpg") center/cover; color: white; }
       .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2, 6, 23, 0.92), rgba(146, 64, 14, 0.18)); }
       .shell, .section { position: relative; z-index: 1; width: var(--page-width); margin: 0 auto; }
       .hero-inner { padding: 28px 0 56px; }
@@ -80,8 +80,10 @@
       const galleryTitle = document.getElementById("gallery-title");
       const gallery = document.getElementById("gallery");
       const status = document.getElementById("status");
+      const hero = document.querySelector(".hero");
       const destinationDetails = {
         "Pahalgam": {
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Pahalgam%2C%20Kashmir.jpg",
           subtitle: "A river valley retreat known for pine forests, mountain air and easy scenic day trips.",
           history:
             "Pahalgam is often called the Valley of Shepherds. It grew from a quiet pastoral settlement into one of Kashmir's best loved hill destinations because of its river landscapes, alpine meadows and access to trekking routes.",
@@ -93,6 +95,7 @@
           ],
         },
         "Gulmarg": {
+          heroImage: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1600&q=80",
           subtitle: "A high-altitude escape famous for snow, gondola rides and broad meadow views.",
           history:
             "Gulmarg means Meadow of Flowers. It became a popular royal summer retreat and later developed into one of India's best known mountain and ski destinations because of its slopes, cool weather and panoramic Himalayan setting.",
@@ -104,6 +107,7 @@
           ],
         },
         "Nishat Garden": {
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Nishat%20Bagh%2C%20Srinagar.jpg",
           subtitle: "A Mughal garden experience with terraces, water channels and Dal Lake views.",
           history:
             "Nishat Bagh was laid out in 1633 during the Mughal era and is traditionally linked with Asif Khan, brother of Empress Noor Jahan. Its terraced design, flowing water and chinar-lined symmetry make it one of Srinagar's most iconic garden spaces.",
@@ -115,6 +119,7 @@
           ],
         },
         "Sonmarg": {
+          heroImage: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1600&q=80",
           subtitle: "A dramatic mountain gateway of meadows, glaciers and river scenery.",
           history:
             "Sonmarg, the Meadow of Gold, has long been known as a scenic stop on the old routes deeper into the Himalayas. Its rivers, glaciers and open alpine surroundings make it one of Kashmir's most striking summer landscapes.",
@@ -153,6 +158,7 @@
       };
 
       const details = destinationDetails[destination] || {
+        heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Shikara%20Dal%20Lake.jpg",
         subtitle: `Visitors can watch photos and short videos from ${destination} here in a clean slideshow.`,
         history: `${destination} is one of Kashmir's scenic highlights, known for memorable natural views and visitor experiences.`,
         highlights: [
@@ -166,6 +172,7 @@
       title.textContent = destination;
       description.textContent = details.subtitle;
       galleryTitle.textContent = `${destination} Visitor Gallery`;
+      hero.style.background = `linear-gradient(135deg, rgba(2, 6, 23, 0.96), rgba(30, 41, 59, 0.92)), url("${details.heroImage}") center/cover`;
 
       const renderSlider = () => {
         if (currentMedia.length === 0) {
