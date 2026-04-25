@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kashmir Dream Holidays</title>
+    <style>
+      :root {
+        --gold-1: #fff7cf;
+        --gold-2: #f8dc88;
+        --gold-3: #d7a62b;
+        --gold-4: #a76f00;
+        --ink: #0f172a;
+        --mist: #e2e8f0;
+        --page-width: min(1320px, calc(100% - 32px));
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: "Segoe UI", sans-serif; background: #f8fafc; color: #0f172a; }
+      .hero { position: relative; overflow: hidden; min-height: 100vh; color: white; background: #020617; }
+      .hero-video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.58; }
+      .overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2, 6, 23, 0.96) 0%, rgba(2, 6, 23, 0.72) 52%, rgba(133, 77, 14, 0.24) 100%); }
+      .shell { position: relative; z-index: 1; width: var(--page-width); margin: 0 auto; }
+      .topbar { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding: 28px 0; }
+      .book-btn, .primary-btn, .ghost-btn { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 18px; padding: 14px 22px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; }
+      .book-btn { background: rgba(255, 255, 255, 0.92); color: #92400e; }
+      .hero-grid { display: block; padding: 10px 0 70px; }
+      .hero-copy { max-width: 980px; padding-top: 40px; }
+      .brand-hero-title { margin: 0; font-family: "Times New Roman", serif; font-size: clamp(44px, 7vw, 96px); font-weight: 600; line-height: 0.94; letter-spacing: 0.06em; color: transparent; background: linear-gradient(180deg, var(--gold-1) 0%, var(--gold-2) 18%, var(--gold-3) 50%, #fff3b2 68%, var(--gold-4) 100%); -webkit-background-clip: text; background-clip: text; text-shadow: 0 2px 24px rgba(245, 196, 67, 0.2); text-transform: uppercase; }
+      .brand-hero-tagline { margin: 18px 0 0; max-width: 760px; color: rgba(248, 250, 252, 0.95); font-size: clamp(16px, 2vw, 24px); line-height: 1.6; letter-spacing: 0.18em; text-transform: uppercase; }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+      .primary-btn { background: #fbbf24; color: #111827; }
+      .ghost-btn { background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255, 255, 255, 0.35); }
+      .section { width: var(--page-width); margin: 0 auto; padding: 38px 0 50px; }
+      .section h3 { margin: 0 0 18px; font-size: 34px; }
+      .cards, .feature-grid, .review-grid, .blog-grid { display: grid; gap: 22px; }
+      .cards, .review-grid, .blog-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .feature-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
+      .card, .soft-card, .feature-tile, .review-tile, .blog-tile { background: white; border-radius: 26px; box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08); }
+      .card { padding: 24px; }
+      .card strong { display: block; font-size: 22px; }
+      .card small { display: block; margin-top: 8px; color: #64748b; }
+      .hero-photo { width: 100%; height: 420px; border-radius: 28px; object-fit: cover; box-shadow: 0 18px 38px rgba(15, 23, 42, 0.16); }
+      .feature-tile { padding: 22px; text-align: center; font-weight: 700; }
+      .destination-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+      .destination-image { width: 100%; height: 240px; object-fit: cover; display: block; }
+      .destination-body, .blog-body, .review-body { padding: 20px; }
+      .explore-link { display: inline-flex; align-items: center; justify-content: center; margin-top: 14px; padding: 12px 18px; border-radius: 16px; background: #fbbf24; color: #111827; font-weight: 700; text-decoration: none; }
+      .section-dark { background: linear-gradient(135deg, #0f172a, #1d4ed8); color: white; }
+      .section-cta { background: linear-gradient(135deg, #b45309, #f59e0b); color: white; text-align: center; }
+      .footer { background: #0f172a; color: white; }
+      .footer-grid { width: var(--page-width); margin: 0 auto; padding: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      @media (max-width: 920px) {
+        .topbar, .hero-grid { grid-template-columns: 1fr; flex-direction: column; align-items: flex-start; }
+        .hero-grid { display: grid; padding-bottom: 44px; }
+        .cards, .two-col, .feature-grid, .destination-grid, .review-grid, .blog-grid, .footer-grid { grid-template-columns: 1fr; }
+        .hero-photo, .destination-image { height: 280px; }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <video class="hero-video-bg" src="./dal-lake-video.mp4" autoplay loop muted playsinline></video>
+      <div class="overlay"></div>
+      <div class="shell">
+        <div class="topbar">
+          <button class="book-btn">Book Now</button>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 class="brand-hero-title">Kashmir Dream Holidays</h1>
+            <p class="brand-hero-tagline">Your Journey To Paradise Begins Here</p>
+            <div class="cta-row">
+              <button class="primary-btn">View Packages</button>
+              <a class="ghost-btn" href="https://wa.me/917006886108" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="two-col">
+        <div>
+          <h3>Discover Gulmarg, Pahalgam, Dal Lake, Nishat Garden &amp; More</h3>
+          <p>Custom Kashmir tours with hotel booking, transport, food, shikara rides, Mughal gardens, houseboats and guided sightseeing.</p>
+          <div class="cta-row">
+            <button class="primary-btn">View Packages</button>
+            <a class="ghost-btn" href="https://wa.me/917006886108" target="_blank" rel="noopener noreferrer" style="color:#0f172a;border-color:#cbd5e1;background:#fff;">WhatsApp Us</a>
+          </div>
+        </div>
+        <img class="hero-photo" src="https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?auto=format&fit=crop&w=1200&q=80" alt="Dal Lake" />
+      </div>
+    </section>
+    <section class="section">
+      <h3>Popular Packages</h3>
+      <div class="cards">
+        <div class="card"><strong>Romantic Kashmir</strong><small>4N / 5D</small><p>Srinagar - Gulmarg - Pahalgam</p></div>
+        <div class="card"><strong>Family Fun Tour</strong><small>5N / 6D</small><p>Dal Lake - Sonamarg - Gulmarg</p></div>
+        <div class="card"><strong>Snow Adventure</strong><small>3N / 4D</small><p>Winter Gulmarg Experience</p></div>
+      </div>
+    </section>
+    <section class="section">
+      <h3>Why Choose Us?</h3>
+      <div class="feature-grid">
+        <div class="feature-tile">Local Experts</div>
+        <div class="feature-tile">Affordable Rates</div>
+        <div class="feature-tile">Trusted Hotels</div>
+        <div class="feature-tile">24/7 Support</div>
+      </div>
+    </section>
+    <section class="section">
+      <h3>Explore Every Destination</h3>
+      <div class="destination-grid">
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1626621341517-bbf3d9990dbf?auto=format&fit=crop&w=900&q=80" alt="Pahalgam" />
+          <div class="destination-body"><strong style="font-size:28px;">Pahalgam</strong><p>Experience the beauty, culture and unforgettable views of Pahalgam.</p><a class="explore-link" href="./destination.html?destination=Pahalgam">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=900&q=80" alt="Gulmarg" />
+          <div class="destination-body"><strong style="font-size:28px;">Gulmarg</strong><p>Snow adventures, premium stays and breathtaking mountain scenery.</p><a class="explore-link" href="./destination.html?destination=Gulmarg">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=900&q=80" alt="Nishat Garden" />
+          <div class="destination-body"><strong style="font-size:28px;">Nishat Garden</strong><p>Elegant Mughal charm with peaceful views and timeless beauty.</p><a class="explore-link" href="./destination.html?destination=Nishat%20Garden">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=80" alt="Sonmarg" />
+          <div class="destination-body"><strong style="font-size:28px;">Sonmarg</strong><p>Golden meadows, river valleys and epic mountain panoramas.</p><a class="explore-link" href="./destination.html?destination=Sonmarg">Explore</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-dark">
+      <div class="section">
+        <h3>Customer Reviews</h3>
+        <div class="review-grid">
+          <div class="review-tile"><div class="review-body">Amazing trip and smooth service!</div></div>
+          <div class="review-tile"><div class="review-body">Best honeymoon package ever.</div></div>
+          <div class="review-tile"><div class="review-body">Trusted team and great hotels.</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h3>Travel Blog</h3>
+      <div class="blog-grid">
+        <div class="blog-tile"><div class="blog-body"><strong>Best Time to Visit Gulmarg</strong><p>Read seasonal travel tips, weather ideas and local planning advice.</p></div></div>
+        <div class="blog-tile"><div class="blog-body"><strong>Top 10 Things in Srinagar</strong><p>Houseboats, gardens, food, shopping and scenic local experiences.</p></div></div>
+        <div class="blog-tile"><div class="blog-body"><strong>Why Kashmir is Paradise</strong><p>Discover what makes the valley unforgettable for couples and families.</p></div></div>
+      </div>
+    </section>
+    <section class="section-cta">
+      <div class="section">
+        <h3 style="font-size:44px;margin-bottom:10px;">Ready For Your Dream Holiday?</h3>
+        <p style="max-width:none;color:white;">Book your Kashmir trip today with premium local support.</p>
+        <div class="cta-row" style="justify-content:center;"><button class="book-btn">Book Now</button></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div><h3 style="margin:0 0 8px;">Kashmir Dream Holidays</h3><p style="margin:0;color:#cbd5e1;">www.kashmirdreamholidays.com</p></div>
+        <div><p style="margin:0 0 8px;">Phone: +91 XXXXX XXXXX</p><p style="margin:0;">Email: info@kashmirdreamholidays.com</p></div>
+      </div>
+    </footer>
+  </body>
+</html>

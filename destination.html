@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destination Media</title>
+    <style>
+      :root { --gold-1: #fff7cf; --gold-2: #f8dc88; --gold-3: #d7a62b; --gold-4: #a76f00; --page-width: min(1280px, calc(100% - 32px)); --bg: #f8fafc; --ink: #0f172a; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Segoe UI", sans-serif; }
+      .hero { position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(2, 6, 23, 0.96), rgba(30, 41, 59, 0.92)), url("https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?auto=format&fit=crop&w=1600&q=80") center/cover; color: white; }
+      .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2, 6, 23, 0.92), rgba(146, 64, 14, 0.18)); }
+      .shell, .section { position: relative; z-index: 1; width: var(--page-width); margin: 0 auto; }
+      .hero-inner { padding: 28px 0 56px; }
+      .topbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+      .back-link { display: inline-flex; align-items: center; gap: 10px; color: #fde68a; text-decoration: none; font-weight: 700; }
+      .badge { display: inline-flex; align-items: center; margin-top: 28px; padding: 11px 16px; border-radius: 999px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(253, 230, 138, 0.25); color: #fde68a; letter-spacing: 0.24em; text-transform: uppercase; font-size: 12px; font-weight: 700; }
+      h1 { margin: 18px 0 10px; font-family: "Times New Roman", serif; font-size: clamp(38px, 6vw, 78px); line-height: 0.96; letter-spacing: 0.06em; color: transparent; background: linear-gradient(180deg, var(--gold-1), var(--gold-2), var(--gold-3), var(--gold-4)); -webkit-background-clip: text; background-clip: text; }
+      .hero p { max-width: 760px; color: rgba(248, 250, 252, 0.9); font-size: 18px; line-height: 1.7; }
+      .section { padding: 34px 0 48px; }
+      .panel { background: white; border-radius: 30px; padding: 24px; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); }
+      .panel h2 { margin: 0 0 10px; font-size: 34px; }
+      .note, .empty, .status { margin-top: 18px; border-radius: 20px; padding: 15px 18px; font-size: 14px; }
+      .note { background: #eff6ff; color: #1e3a8a; }
+      .status { background: #ecfdf5; color: #166534; }
+      .status.is-error { background: #fff1f2; color: #be123c; }
+      .status.is-working { background: #fffbeb; color: #92400e; }
+      .empty { border: 1px dashed #cbd5e1; background: #f8fafc; color: #64748b; }
+      .slider-shell { margin-top: 26px; }
+      .slider { position: relative; overflow: hidden; border-radius: 28px; background: #e2e8f0; box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1); }
+      .slide-media { width: 100%; height: min(68vw, 620px); display: block; object-fit: cover; background: #020617; }
+      .slider-controls { position: absolute; inset: auto 0 18px 0; display: flex; justify-content: space-between; align-items: center; padding: 0 18px; pointer-events: none; }
+      .nav-btn { pointer-events: auto; border: 0; width: 52px; height: 52px; border-radius: 999px; background: rgba(15, 23, 42, 0.74); color: white; font-size: 26px; cursor: pointer; backdrop-filter: blur(8px); }
+      .slide-meta { margin-top: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; }
+      .slide-name { font-size: 20px; font-weight: 700; }
+      .slide-count { color: #64748b; font-size: 14px; font-weight: 700; }
+      .dots { display: flex; gap: 10px; flex-wrap: wrap; }
+      .dot { width: 12px; height: 12px; border-radius: 999px; border: 0; background: #cbd5e1; cursor: pointer; }
+      .dot.active { background: linear-gradient(135deg, #f8dc88, #d7a62b); }
+      .admin-note { margin-top: 20px; border-radius: 20px; padding: 15px 18px; background: #fff7ed; color: #9a3412; font-size: 14px; }
+      .info-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+      .info-card { border-radius: 24px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 22px; }
+      .info-card h3 { margin: 0 0 12px; font-size: 22px; }
+      .info-card p { margin: 0; color: #334155; line-height: 1.7; }
+      .info-list { margin: 0; padding-left: 18px; color: #334155; line-height: 1.8; }
+      .info-list li + li { margin-top: 6px; }
+      @media (max-width: 700px) { .topbar { display: grid; grid-template-columns: 1fr; } .slide-media { height: 340px; } .slide-meta { display: grid; grid-template-columns: 1fr; } .slider-controls { padding: 0 10px; } .nav-btn { width: 46px; height: 46px; } .info-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="shell hero-inner">
+        <div class="topbar"><a class="back-link" href="./index.html">&#8592; Back to main website</a></div>
+        <div class="badge">Destination Showcase</div>
+        <h1 id="title">Destination</h1>
+        <p id="description">Visitors can watch destination highlights here as a clean slideshow. Upload controls are hidden from the public website.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="panel">
+        <h2 id="gallery-title">Visitor Gallery</h2>
+        <p>Swipe through photos and short videos for this destination in a single showcase slider.</p>
+        <div id="mode-note" class="note">Public view only: visitors can watch the media here, but uploads are not available on the public website.</div>
+        <div id="status" class="status" hidden></div>
+        <div id="gallery"></div>
+        <div class="admin-note">This gallery is curated and updated by Kashmir Dream Holidays for a cleaner visitor experience.</div>
+      </div>
+    </section>
+    <script>
+      const TABLE_NAME = "destination_media";
+      const SUPABASE_CONFIG = {
+        url: "https://zjtoqqbdfphbkdnpcfdy.supabase.co",
+        anonKey: "sb_publishable_zzBbKdv76mZ5f_y9ecvyHg_UG8tHL3v",
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const destination = params.get("destination") || "Destination";
+      const title = document.getElementById("title");
+      const description = document.getElementById("description");
+      const galleryTitle = document.getElementById("gallery-title");
+      const gallery = document.getElementById("gallery");
+      const status = document.getElementById("status");
+      const destinationDetails = {
+        "Pahalgam": {
+          subtitle: "A river valley retreat known for pine forests, mountain air and easy scenic day trips.",
+          history:
+            "Pahalgam is often called the Valley of Shepherds. It grew from a quiet pastoral settlement into one of Kashmir's best loved hill destinations because of its river landscapes, alpine meadows and access to trekking routes.",
+          highlights: [
+            "Lidder River viewpoints and riverside walks",
+            "Betaab Valley for open meadows and film-famous scenery",
+            "Aru Valley for mountain views and pony rides",
+            "Baisaran, often called Mini Switzerland",
+          ],
+        },
+        "Gulmarg": {
+          subtitle: "A high-altitude escape famous for snow, gondola rides and broad meadow views.",
+          history:
+            "Gulmarg means Meadow of Flowers. It became a popular royal summer retreat and later developed into one of India's best known mountain and ski destinations because of its slopes, cool weather and panoramic Himalayan setting.",
+          highlights: [
+            "Gulmarg Gondola ride toward Apharwat Peak",
+            "Snow play and winter adventure areas",
+            "Wide meadow walks and summer flower fields",
+            "Golf course and old-world hill station atmosphere",
+          ],
+        },
+        "Nishat Garden": {
+          subtitle: "A Mughal garden experience with terraces, water channels and Dal Lake views.",
+          history:
+            "Nishat Bagh was laid out in 1633 during the Mughal era and is traditionally linked with Asif Khan, brother of Empress Noor Jahan. Its terraced design, flowing water and chinar-lined symmetry make it one of Srinagar's most iconic garden spaces.",
+          highlights: [
+            "Terraced Mughal landscaping and central water cascade",
+            "Dal Lake views framed by old chinar trees",
+            "Stone walkways, lawns and floral beds for photography",
+            "Peaceful evening strolls with mountain backdrops",
+          ],
+        },
+        "Sonmarg": {
+          subtitle: "A dramatic mountain gateway of meadows, glaciers and river scenery.",
+          history:
+            "Sonmarg, the Meadow of Gold, has long been known as a scenic stop on the old routes deeper into the Himalayas. Its rivers, glaciers and open alpine surroundings make it one of Kashmir's most striking summer landscapes.",
+          highlights: [
+            "Thajiwas Glacier excursion and snow views",
+            "Sindh River scenery and riverside stops",
+            "High meadow panoramas and mountain photography",
+            "Day trips toward Baltal and nearby alpine points",
+          ],
+        },
+      };
+
+      let currentIndex = 0;
+      let currentMedia = [];
+
+      const authHeaders = {
+        apikey: SUPABASE_CONFIG.anonKey,
+        Authorization: `Bearer ${SUPABASE_CONFIG.anonKey}`,
+      };
+
+      const showStatus = (message, tone = "success") => {
+        status.hidden = false;
+        status.className = "status";
+        if (tone === "error") status.classList.add("is-error");
+        if (tone === "working") status.classList.add("is-working");
+        status.textContent = message;
+      };
+
+      const safeJson = async (response) => {
+        const text = await response.text();
+        try {
+          return text ? JSON.parse(text) : {};
+        } catch {
+          return { message: text || response.statusText };
+        }
+      };
+
+      const details = destinationDetails[destination] || {
+        subtitle: `Visitors can watch photos and short videos from ${destination} here in a clean slideshow.`,
+        history: `${destination} is one of Kashmir's scenic highlights, known for memorable natural views and visitor experiences.`,
+        highlights: [
+          `Scenic viewpoints around ${destination}`,
+          "Photography-friendly spots and landscape views",
+          "Seasonal local experiences and sightseeing moments",
+          "Relaxed outdoor exploration",
+        ],
+      };
+
+      title.textContent = destination;
+      description.textContent = details.subtitle;
+      galleryTitle.textContent = `${destination} Visitor Gallery`;
+
+      const renderSlider = () => {
+        if (currentMedia.length === 0) {
+          gallery.innerHTML = `<div class="empty">No media added for ${destination} yet.</div>`;
+          return;
+        }
+
+        const active = currentMedia[currentIndex];
+        gallery.innerHTML = `
+          <div class="slider-shell">
+            <div class="slider">
+              ${
+                active.kind === "video"
+                  ? `<video class="slide-media" src="${active.src}" controls autoplay muted loop playsinline></video>`
+                  : `<img class="slide-media" src="${active.src}" alt="${active.name}" />`
+              }
+              <div class="slider-controls">
+                <button class="nav-btn" id="prev-slide" type="button">&#8249;</button>
+                <button class="nav-btn" id="next-slide" type="button">&#8250;</button>
+              </div>
+            </div>
+            <div class="slide-meta">
+              <div>
+                <div class="slide-name">${destination} Showcase</div>
+                <div class="slide-count">Slide ${currentIndex + 1} of ${currentMedia.length}</div>
+              </div>
+              <div class="dots">
+                ${currentMedia
+                  .map(
+                    (_, index) =>
+                      `<button class="dot ${index === currentIndex ? "active" : ""}" data-index="${index}" type="button" aria-label="Go to slide ${index + 1}"></button>`
+                  )
+                  .join("")}
+              </div>
+            </div>
+            <div class="info-grid">
+              <div class="info-card">
+                <h3>History</h3>
+                <p>${details.history}</p>
+              </div>
+              <div class="info-card">
+                <h3>What To See Here</h3>
+                <ul class="info-list">
+                  ${details.highlights.map((item) => `<li>${item}</li>`).join("")}
+                </ul>
+              </div>
+            </div>
+          </div>
+        `;
+
+        document.getElementById("prev-slide").addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + currentMedia.length) % currentMedia.length;
+          renderSlider();
+        });
+
+        document.getElementById("next-slide").addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % currentMedia.length;
+          renderSlider();
+        });
+
+        Array.from(document.querySelectorAll(".dot")).forEach((dot) => {
+          dot.addEventListener("click", () => {
+            currentIndex = Number(dot.getAttribute("data-index"));
+            renderSlider();
+          });
+        });
+      };
+
+      const loadGallery = async () => {
+        showStatus("Loading destination gallery...", "working");
+
+        const query = new URLSearchParams({
+          select: "id,destination,file_name,media_type,public_url,file_path,created_at",
+          destination: `eq.${destination}`,
+          order: "created_at.desc",
+        });
+
+        const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${TABLE_NAME}?${query.toString()}`, {
+          headers: authHeaders,
+        });
+
+        const data = await safeJson(response);
+
+        if (!response.ok) {
+          showStatus(`Could not load gallery: ${data.message || response.statusText}`, "error");
+          gallery.innerHTML = `<div class="empty">Could not load gallery right now.</div>`;
+          return;
+        }
+
+        currentMedia = (data || []).map((item) => ({
+          id: item.id,
+          name: item.file_name,
+          kind: item.media_type,
+          src: item.public_url,
+        }));
+
+        status.hidden = true;
+        currentIndex = 0;
+        renderSlider();
+      };
+
+      window.addEventListener("error", (event) => {
+        showStatus(`Page error: ${event.message}`, "error");
+      });
+
+      loadGallery().catch((error) => {
+        showStatus(`Setup failed: ${error.message}`, "error");
+      });
+    </script>
+  </body>
+</html>
