@@ -46,8 +46,8 @@
       .package-card .card-read { display: inline-flex; margin-top: 16px; color: #b45309; font-size: 14px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
       .hero-photo { width: 100%; height: 420px; border-radius: 28px; object-fit: cover; box-shadow: 0 18px 38px rgba(15, 23, 42, 0.16); }
       .feature-tile { padding: 22px; text-align: center; font-weight: 700; }
-      .destination-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-      .destination-image { width: 100%; height: 240px; object-fit: cover; display: block; }
+      .destination-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+      .destination-image { width: 100%; height: 200px; object-fit: cover; display: block; }
       .destination-body, .blog-body, .review-body { padding: 20px; }
       .explore-link { display: inline-flex; align-items: center; justify-content: center; margin-top: 14px; padding: 12px 18px; border-radius: 16px; background: #fbbf24; color: #111827; font-weight: 700; text-decoration: none; }
       .blog-tile { text-decoration: none; color: inherit; transition: transform 180ms ease, box-shadow 180ms ease; }
@@ -59,6 +59,9 @@
       .section-cta { background: linear-gradient(135deg, #b45309, #f59e0b); color: white; text-align: center; }
       .footer { background: #0f172a; color: white; }
       .footer-grid { width: var(--page-width); margin: 0 auto; padding: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      @media (max-width: 1100px) and (min-width: 921px) {
+        .destination-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
       @media (max-width: 920px) {
         .topbar, .hero-grid { grid-template-columns: 1fr; flex-direction: column; align-items: flex-start; }
         .hero-grid { display: grid; padding-bottom: 44px; }
@@ -136,20 +139,52 @@
       <h3>Explore Every Destination</h3>
       <div class="destination-grid">
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pahalgam%2C%20Kashmir.jpg" alt="Pahalgam Kashmir" />
-          <div class="destination-body"><strong style="font-size:28px;">Pahalgam</strong><p>Experience the beauty, culture and unforgettable views of Pahalgam.</p><a class="explore-link" href="./destination.html?destination=Pahalgam">Explore</a></div>
+          <img class="destination-image" src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=900&q=80" alt="Pahalgam Kashmir" />
+          <div class="destination-body"><strong style="font-size:22px;">Pahalgam</strong><p>Experience the beauty, culture and unforgettable views of Pahalgam.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Pahalgam">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
           <img class="destination-image" src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=900&q=80" alt="Gulmarg" />
-          <div class="destination-body"><strong style="font-size:28px;">Gulmarg</strong><p>Snow adventures, premium stays and breathtaking mountain scenery.</p><a class="explore-link" href="./destination.html?destination=Gulmarg">Explore</a></div>
+          <div class="destination-body"><strong style="font-size:22px;">Gulmarg</strong><p>Snow adventures, premium stays and breathtaking mountain scenery.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Gulmarg">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nishat%20Bagh%2C%20Srinagar.jpg" alt="Nishat Garden Srinagar" />
-          <div class="destination-body"><strong style="font-size:28px;">Nishat Garden</strong><p>Elegant Mughal charm with peaceful views and timeless beauty.</p><a class="explore-link" href="./destination.html?destination=Nishat%20Garden">Explore</a></div>
+          <img class="destination-image" src="https://images.unsplash.com/photo-1592385704183-f1d0b37a54e3?auto=format&fit=crop&w=900&q=80" alt="Nishat Garden Srinagar" />
+          <div class="destination-body"><strong style="font-size:22px;">Nishat Garden</strong><p>Elegant Mughal charm with peaceful views and timeless beauty.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Nishat%20Garden">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
           <img class="destination-image" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=80" alt="Sonmarg" />
-          <div class="destination-body"><strong style="font-size:28px;">Sonmarg</strong><p>Golden meadows, river valleys and epic mountain panoramas.</p><a class="explore-link" href="./destination.html?destination=Sonmarg">Explore</a></div>
+          <div class="destination-body"><strong style="font-size:22px;">Sonmarg</strong><p>Golden meadows, river valleys and epic mountain panoramas.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Sonmarg">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Tulip Garden Srinagar" />
+          <div class="destination-body"><strong style="font-size:22px;">Tulip Garden</strong><p>Asia's largest tulip garden bursting with colour every spring.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Tulip%20Garden">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=80" alt="Dal Lake Srinagar" />
+          <div class="destination-body"><strong style="font-size:22px;">Dal Lake</strong><p>Iconic shikara rides, floating markets and serene houseboat stays.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Dal%20Lake">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80" alt="Betab Valley Pahalgam" />
+          <div class="destination-body"><strong style="font-size:22px;">Betab Valley</strong><p>Lush green valley named after the Bollywood classic, stunning scenery.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Betab%20Valley">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Kokarnag Kashmir" />
+          <div class="destination-body"><strong style="font-size:22px;">Kokarnag</strong><p>Famous for its natural springs, rose gardens and trout fisheries.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Kokarnag">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=900&q=80" alt="Verinag Kashmir" />
+          <div class="destination-body"><strong style="font-size:22px;">Verinag</strong><p>Historic Mughal spring garden, source of the Jhelum river.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Verinag">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Doodhpathri Kashmir" />
+          <div class="destination-body"><strong style="font-size:22px;">Doodhpathri</strong><p>The Valley of Milk — pristine alpine meadows with milky streams.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Doodhpathri">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=900&q=80" alt="Gurez Valley Kashmir" />
+          <div class="destination-body"><strong style="font-size:22px;">Gurez Valley</strong><p>Remote, untouched valley with dramatic peaks and Dard culture.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Gurez%20Valley">Explore</a></div>
+        </div>
+        <div class="soft-card" style="padding:0;display:block;">
+          <img class="destination-image" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80" alt="Aharbal Waterfall Mughal Road" />
+          <div class="destination-body"><strong style="font-size:22px;">Aharbal Waterfall</strong><p>The Niagara of Kashmir on the scenic Mughal Road, breathtaking falls.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Aharbal%20Waterfall">Explore</a></div>
         </div>
       </div>
     </section>

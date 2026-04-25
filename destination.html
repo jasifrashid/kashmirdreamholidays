@@ -60,10 +60,8 @@
       <div class="panel">
         <h2 id="gallery-title">Visitor Gallery</h2>
         <p>Swipe through photos and short videos for this destination in a single showcase slider.</p>
-        <div id="mode-note" class="note">Public view only: visitors can watch the media here, but uploads are not available on the public website.</div>
         <div id="status" class="status" hidden></div>
         <div id="gallery"></div>
-        <div class="admin-note">This gallery is curated and updated by Kashmir Dream Holidays for a cleaner visitor experience.</div>
       </div>
     </section>
     <script>
@@ -83,51 +81,157 @@
       const hero = document.querySelector(".hero");
       const destinationDetails = {
         "Pahalgam": {
-          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Pahalgam%2C%20Kashmir.jpg",
+          heroImage: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1600&q=80",
           subtitle: "A river valley retreat known for pine forests, mountain air and easy scenic day trips.",
-          history:
-            "Pahalgam is often called the Valley of Shepherds. It grew from a quiet pastoral settlement into one of Kashmir's best loved hill destinations because of its river landscapes, alpine meadows and access to trekking routes.",
-          highlights: [
-            "Lidder River viewpoints and riverside walks",
-            "Betaab Valley for open meadows and film-famous scenery",
-            "Aru Valley for mountain views and pony rides",
-            "Baisaran, often called Mini Switzerland",
+          history: "Pahalgam is often called the Valley of Shepherds. It grew from a quiet pastoral settlement into one of Kashmir's best loved hill destinations because of its river landscapes, alpine meadows and access to trekking routes.",
+          highlights: ["Lidder River viewpoints and riverside walks", "Betaab Valley for open meadows and film-famous scenery", "Aru Valley for mountain views and pony rides", "Baisaran, often called Mini Switzerland"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1400&q=85", name: "Pahalgam Valley" },
+            { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1400&q=85", name: "Pahalgam Mountains" },
+            { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85", name: "Pahalgam River" },
+            { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85", name: "Pahalgam Meadows" },
+            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Pahalgam Forest" },
           ],
         },
         "Gulmarg": {
           heroImage: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1600&q=80",
           subtitle: "A high-altitude escape famous for snow, gondola rides and broad meadow views.",
-          history:
-            "Gulmarg means Meadow of Flowers. It became a popular royal summer retreat and later developed into one of India's best known mountain and ski destinations because of its slopes, cool weather and panoramic Himalayan setting.",
-          highlights: [
-            "Gulmarg Gondola ride toward Apharwat Peak",
-            "Snow play and winter adventure areas",
-            "Wide meadow walks and summer flower fields",
-            "Golf course and old-world hill station atmosphere",
+          history: "Gulmarg means Meadow of Flowers. It became a popular royal summer retreat and later developed into one of India's best known mountain and ski destinations because of its slopes, cool weather and panoramic Himalayan setting.",
+          highlights: ["Gulmarg Gondola ride toward Apharwat Peak", "Snow play and winter adventure areas", "Wide meadow walks and summer flower fields", "Golf course and old-world hill station atmosphere"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1400&q=85", name: "Gulmarg Snow" },
+            { src: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1400&q=85", name: "Gulmarg Mountains" },
+            { src: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=1400&q=85", name: "Gulmarg Valley" },
+            { src: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=1400&q=85", name: "Gulmarg Meadows" },
+            { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=85", name: "Gulmarg Peaks" },
           ],
         },
         "Nishat Garden": {
-          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Nishat%20Bagh%2C%20Srinagar.jpg",
+          heroImage: "https://images.unsplash.com/photo-1592385704183-f1d0b37a54e3?auto=format&fit=crop&w=1600&q=80",
           subtitle: "A Mughal garden experience with terraces, water channels and Dal Lake views.",
-          history:
-            "Nishat Bagh was laid out in 1633 during the Mughal era and is traditionally linked with Asif Khan, brother of Empress Noor Jahan. Its terraced design, flowing water and chinar-lined symmetry make it one of Srinagar's most iconic garden spaces.",
-          highlights: [
-            "Terraced Mughal landscaping and central water cascade",
-            "Dal Lake views framed by old chinar trees",
-            "Stone walkways, lawns and floral beds for photography",
-            "Peaceful evening strolls with mountain backdrops",
+          history: "Nishat Bagh was laid out in 1633 during the Mughal era and is traditionally linked with Asif Khan, brother of Empress Noor Jahan. Its terraced design, flowing water and chinar-lined symmetry make it one of Srinagar's most iconic garden spaces.",
+          highlights: ["Terraced Mughal landscaping and central water cascade", "Dal Lake views framed by old chinar trees", "Stone walkways, lawns and floral beds for photography", "Peaceful evening strolls with mountain backdrops"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1592385704183-f1d0b37a54e3?auto=format&fit=crop&w=1400&q=85", name: "Nishat Garden Terraces" },
+            { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=85", name: "Nishat Garden Flowers" },
+            { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=85", name: "Nishat Garden Dal Lake View" },
+            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Nishat Garden Pathways" },
           ],
         },
         "Sonmarg": {
           heroImage: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1600&q=80",
           subtitle: "A dramatic mountain gateway of meadows, glaciers and river scenery.",
-          history:
-            "Sonmarg, the Meadow of Gold, has long been known as a scenic stop on the old routes deeper into the Himalayas. Its rivers, glaciers and open alpine surroundings make it one of Kashmir's most striking summer landscapes.",
-          highlights: [
-            "Thajiwas Glacier excursion and snow views",
-            "Sindh River scenery and riverside stops",
-            "High meadow panoramas and mountain photography",
-            "Day trips toward Baltal and nearby alpine points",
+          history: "Sonmarg, the Meadow of Gold, has long been known as a scenic stop on the old routes deeper into the Himalayas. Its rivers, glaciers and open alpine surroundings make it one of Kashmir's most striking summer landscapes.",
+          highlights: ["Thajiwas Glacier excursion and snow views", "Sindh River scenery and riverside stops", "High meadow panoramas and mountain photography", "Day trips toward Baltal and nearby alpine points"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1400&q=85", name: "Sonmarg Mountains" },
+            { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1400&q=85", name: "Sonmarg Snow Fields" },
+            { src: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=1400&q=85", name: "Sonmarg Valley" },
+            { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85", name: "Sonmarg Meadows" },
+            { src: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=1400&q=85", name: "Sonmarg River" },
+          ],
+        },
+        "Tulip Garden": {
+          heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80",
+          subtitle: "Asia's largest tulip garden, ablaze with colour every spring on the slopes of Zabarwan.",
+          history: "The Indira Gandhi Memorial Tulip Garden was established in 2007 to boost tourism and floriculture in Kashmir. Spread across seven terraces on the foothills of Zabarwan mountain, it overlooks Dal Lake and blooms with over 1.5 million tulips of more than 60 varieties each March and April.",
+          highlights: ["Over 1.5 million tulips across 60+ varieties in spring", "Seven terraced levels with stunning Dal Lake backdrop", "Spring Tulip Festival with cultural performances", "Zabarwan mountain views and nature walks nearby"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=85", name: "Tulip Garden Blooms" },
+            { src: "https://images.unsplash.com/photo-1490750967868-88df5691cc6f?auto=format&fit=crop&w=1400&q=85", name: "Tulip Garden Colours" },
+            { src: "https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?auto=format&fit=crop&w=1400&q=85", name: "Tulip Garden Fields" },
+            { src: "https://images.unsplash.com/photo-1523693916666-5574b28b3a74?auto=format&fit=crop&w=1400&q=85", name: "Tulip Garden Spring" },
+            { src: "https://images.unsplash.com/photo-1444930694458-0ef22b703e59?auto=format&fit=crop&w=1400&q=85", name: "Tulip Garden Overview" },
+          ],
+        },
+        "Dal Lake": {
+          heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80",
+          subtitle: "The iconic heart of Srinagar — shikara rides, floating markets and houseboat stays.",
+          history: "Dal Lake has been the soul of Srinagar for centuries. Its floating gardens, called Radhs, have fed the city for generations. Mughal emperors camped on its shores, and today it remains Kashmir's most photographed landmark, known for its wooden houseboats, shikara boats and the timeless rhythm of life on the water.",
+          highlights: ["Shikara rides at sunrise and sunset", "Floating vegetable and flower markets at dawn", "Overnight houseboat stays with lake views", "Nehru Park island and Char Chinar island visits"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=85", name: "Dal Lake Panorama" },
+            { src: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=1400&q=85", name: "Dal Lake Shikara" },
+            { src: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=1400&q=85", name: "Dal Lake Houseboats" },
+            { src: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1400&q=85", name: "Dal Lake Sunrise" },
+            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Dal Lake Reflections" },
+          ],
+        },
+        "Betab Valley": {
+          heroImage: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1600&q=80",
+          subtitle: "A lush green valley near Pahalgam, famous for Bollywood films and alpine scenery.",
+          history: "Betab Valley takes its name from the 1983 Bollywood film Betaab, which was shot in this location. Sitting at around 2,400 metres in the Lidder Valley, it is known for its dense pine and fir forests, clear rivers and open meadows that draw visitors for picnics and nature walks.",
+          highlights: ["Open green meadows perfect for picnics and photography", "Lidder River flowing through the valley floor", "Dense pine and fir forest trails", "Scenic gateway for trekking toward Chandanwari"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85", name: "Betab Valley Green Meadows" },
+            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Betab Valley Forest" },
+            { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85", name: "Betab Valley River" },
+            { src: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=1400&q=85", name: "Betab Valley Scenery" },
+            { src: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1400&q=85", name: "Betab Valley Mountains" },
+          ],
+        },
+        "Kokarnag": {
+          heroImage: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80",
+          subtitle: "Kashmir's garden of springs — famous for roses, trout and peaceful natural beauty.",
+          history: "Kokarnag, situated in the Anantnag district, is known as the garden of springs. Its natural spring water is considered among the purest in Kashmir and has fed the area's famous trout fisheries for generations. The beautifully maintained gardens, rose parks and cool stream-side walks make it a beloved escape.",
+          highlights: ["Natural freshwater springs and scenic waterways", "Rose garden with hundreds of varieties in bloom", "Trout fishing in clear, cold streams", "Peaceful forest walks and family picnic spots"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85", name: "Kokarnag Springs" },
+            { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=85", name: "Kokarnag Rose Garden" },
+            { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85", name: "Kokarnag Gardens" },
+            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Kokarnag Forest" },
+            { src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1400&q=85", name: "Kokarnag Streams" },
+          ],
+        },
+        "Verinag": {
+          heroImage: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=1600&q=80",
+          subtitle: "A serene Mughal garden at the source of the mighty Jhelum river.",
+          history: "Verinag is home to one of Kashmir's most historically important natural springs, believed to be the origin of the Jhelum river. Emperor Jahangir was so captivated by it that he built an octagonal stone basin and garden around the spring in the early 17th century. The surrounding garden and clear blue pool remain largely unchanged.",
+          highlights: ["Historic octagonal spring pool built by Emperor Jahangir", "Source of the Jhelum river and crystal-clear spring water", "Mughal-era garden terraces and stone architecture", "Tranquil setting ideal for quiet walks and reflection"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=1400&q=85", name: "Verinag Spring Pool" },
+            { src: "https://images.unsplash.com/photo-1592385704183-f1d0b37a54e3?auto=format&fit=crop&w=1400&q=85", name: "Verinag Garden" },
+            { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85", name: "Verinag Springs" },
+            { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85", name: "Verinag Surroundings" },
+          ],
+        },
+        "Doodhpathri": {
+          heroImage: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          subtitle: "The Valley of Milk — pristine alpine meadows with milky white streams and wildflowers.",
+          history: "Doodhpathri, meaning Valley of Milk, gets its name from the white, frothy streams that rush through its meadows, so fast and foamy they resemble flowing milk. Located in Budgam district at around 2,700 metres, it remains largely untouched and is one of Kashmir's best kept secrets for nature lovers.",
+          highlights: ["Milky white rushing streams and alpine river crossings", "Wildflower-carpeted meadows in summer", "Dense fir and pine forests for nature walks", "Picnic spots with sweeping valley panoramas"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Doodhpathri Meadows" },
+            { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85", name: "Doodhpathri Valley" },
+            { src: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1400&q=85", name: "Doodhpathri Mountains" },
+            { src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1400&q=85", name: "Doodhpathri Streams" },
+            { src: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1400&q=85", name: "Doodhpathri Wildflowers" },
+          ],
+        },
+        "Gurez Valley": {
+          heroImage: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=1600&q=80",
+          subtitle: "A remote, untouched valley with dramatic peaks, the Kishanganga river and rich Dard heritage.",
+          history: "Gurez Valley sits close to the Line of Control and remained restricted for decades, which preserved its extraordinary natural beauty and unique Dard Shin culture. The valley is overlooked by Habba Khatoon Peak, named after Kashmir's beloved 16th-century poetess, and is crossed by the turquoise Kishanganga river.",
+          highlights: ["Kishanganga river with dramatic gorge scenery", "Habba Khatoon Peak and mountain photography", "Traditional Dard Shin wooden architecture villages", "Offbeat trekking routes and untouched alpine landscapes"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=1400&q=85", name: "Gurez Valley Panorama" },
+            { src: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1400&q=85", name: "Gurez Valley Peaks" },
+            { src: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=1400&q=85", name: "Gurez Valley River" },
+            { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1400&q=85", name: "Gurez Valley Snow" },
+            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Gurez Valley Forest" },
+          ],
+        },
+        "Aharbal Waterfall": {
+          heroImage: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1600&q=80",
+          subtitle: "The Niagara of Kashmir — a powerful waterfall on the scenic Mughal Road.",
+          history: "Aharbal Waterfall, often called the Niagara of Kashmir, is formed by the Vishav river plunging about 25 metres over a rocky cliff in the Kulgam district. Sitting along the historic Mughal Road that once connected Kashmir to the plains, it is surrounded by dense forests and mountain views that make it one of the valley's most dramatic natural attractions.",
+          highlights: ["25-metre waterfall with powerful mist and roar", "Scenic Mughal Road drive through mountain passes", "Dense pine forest walks and picnic spots", "Trout fishing in the Vishav river below the falls"],
+          photos: [
+            { src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1400&q=85", name: "Aharbal Waterfall" },
+            { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85", name: "Aharbal Forest" },
+            { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85", name: "Aharbal Valley" },
+            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Aharbal River" },
+            { src: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=1400&q=85", name: "Aharbal Mughal Road" },
           ],
         },
       };
@@ -242,36 +346,31 @@
       };
 
       const loadGallery = async () => {
-        showStatus("Loading destination gallery...", "working");
-
-        const query = new URLSearchParams({
-          select: "id,destination,file_name,media_type,public_url,file_path,created_at",
-          destination: `eq.${destination}`,
-          order: "created_at.desc",
-        });
-
-        const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${TABLE_NAME}?${query.toString()}`, {
-          headers: authHeaders,
-        });
-
-        const data = await safeJson(response);
-
-        if (!response.ok) {
-          showStatus(`Could not load gallery: ${data.message || response.statusText}`, "error");
-          gallery.innerHTML = `<div class="empty">Could not load gallery right now.</div>`;
-          return;
-        }
-
-        currentMedia = (data || []).map((item) => ({
-          id: item.id,
-          name: item.file_name,
-          kind: item.media_type,
-          src: item.public_url,
-        }));
-
-        status.hidden = true;
+        // Load built-in photos immediately — no waiting
+        const builtIn = (details.photos || []).map((p) => ({ name: p.name, kind: "image", src: p.src }));
+        currentMedia = builtIn;
         currentIndex = 0;
+        status.hidden = true;
         renderSlider();
+
+        // Then try to merge any uploaded media from Supabase on top
+        try {
+          const query = new URLSearchParams({
+            select: "id,destination,file_name,media_type,public_url,file_path,created_at",
+            destination: `eq.${destination}`,
+            order: "created_at.desc",
+          });
+          const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${TABLE_NAME}?${query.toString()}`, { headers: authHeaders });
+          if (response.ok) {
+            const data = await safeJson(response);
+            const uploaded = (data || []).map((item) => ({ id: item.id, name: item.file_name, kind: item.media_type, src: item.public_url }));
+            if (uploaded.length > 0) {
+              currentMedia = [...uploaded, ...builtIn];
+              currentIndex = 0;
+              renderSlider();
+            }
+          }
+        } catch (_) { /* silently ignore — built-in photos already showing */ }
       };
 
       window.addEventListener("error", (event) => {
