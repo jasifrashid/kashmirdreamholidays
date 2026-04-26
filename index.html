@@ -100,8 +100,8 @@
 
       <!-- Navbar -->
       <nav class="navbar">
-        <a class="navbar-logo" href="#">
-          <div class="navbar-logo-icon">🏔️</div>
+        <a class="navbar-logo" href="https://chatgpt.com/s/m_69ed8c82a1ac8191883ee6ccde1729df" target="_blank" rel="noopener noreferrer">
+          <img src="./logo_kashmir.png" alt="Kashmir Dream Holidays Logo" style="height:52px;width:auto;border-radius:8px;" />
           Kashmir Dream Holidays
         </a>
         <div class="navbar-links">
@@ -248,27 +248,88 @@
         <img class="strip-img" src="https://images.unsplash.com/photo-1668173443752-bdec2fbb3c79?auto=format&fit=crop&w=640&q=80" alt="Kashmir river valley" />
       </div>
     </div>
-    <section class="section">
-      <h3>Popular Packages</h3>
-      <div class="cards">
-        <a class="card package-card" href="./package.html?plan=romantic-kashmir">
-          <strong>Romantic Kashmir</strong>
-          <small>4N / 5D</small>
-          <p>Dal Lake - Nishat Shalimar - Gulmarg - Pahalgam</p>
-          <span class="card-read">Open Day Plan</span>
-        </a>
-        <a class="card package-card" href="./package.html?plan=family-fun-tour">
-          <strong>Family Fun Tour</strong>
-          <small>5N / 6D</small>
-          <p>Dal Lake - Sonmarg - Gulmarg - Kokarnag Circuit</p>
-          <span class="card-read">Open Day Plan</span>
-        </a>
-        <a class="card package-card" href="./package.html?plan=snow-adventure">
-          <strong>Snow Adventure</strong>
-          <small>3N / 4D</small>
-          <p>Dal Lake - Gulmarg - Aharbal - Peer Ki Gali</p>
-          <span class="card-read">Open Day Plan</span>
-        </a>
+    <style>
+      .pkg-section { background: #fff; padding: 72px 0; }
+      .pkg-inner { width: var(--page-width); margin: 0 auto; }
+      .pkg-eyebrow { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.28em; text-transform: uppercase; color: #b45309; background: #fef3c7; padding: 6px 14px; border-radius: 999px; margin-bottom: 14px; }
+      .pkg-heading { margin: 0 0 8px; font-family: "Times New Roman", serif; font-size: clamp(28px, 3vw, 44px); font-weight: 700; color: #0f172a; }
+      .pkg-subhead { color: #64748b; margin: 0 0 44px; font-size: 15px; }
+      .pkg-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; }
+      .pkg-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 28px rgba(15,23,42,0.08); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.22s, box-shadow 0.22s; border: 1px solid #f1f5f9; }
+      .pkg-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(15,23,42,0.14); }
+      .pkg-img-wrap { position: relative; }
+      .pkg-img { width: 100%; height: 210px; object-fit: cover; display: block; }
+      .pkg-badge { position: absolute; top: 14px; left: 14px; background: #fbbf24; color: #111; font-size: 11px; font-weight: 800; padding: 5px 12px; border-radius: 999px; letter-spacing: 0.05em; }
+      .pkg-duration { position: absolute; top: 14px; right: 14px; background: rgba(15,23,42,0.75); color: white; font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 999px; backdrop-filter: blur(6px); }
+      .pkg-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+      .pkg-title { margin: 0 0 8px; font-size: 20px; font-weight: 700; color: #0f172a; }
+      .pkg-route { font-size: 13px; color: #64748b; margin: 0 0 14px; line-height: 1.6; }
+      .pkg-includes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+      .pkg-tag { background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 999px; }
+      .pkg-cta { display: inline-flex; align-items: center; justify-content: center; gap: 6px; margin-top: auto; background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #111827; font-weight: 800; font-size: 14px; padding: 13px 20px; border-radius: 14px; text-decoration: none; border: none; cursor: pointer; }
+      @media (max-width: 920px) { .pkg-grid { grid-template-columns: 1fr; } }
+    </style>
+    <section class="pkg-section" id="packages">
+      <div class="pkg-inner">
+        <span class="pkg-eyebrow">✦ Curated Tours</span>
+        <h2 class="pkg-heading">Popular Packages</h2>
+        <p class="pkg-subhead">Handcrafted Kashmir experiences — hotels, transport and sightseeing included</p>
+        <div class="pkg-grid">
+          <a class="pkg-card" href="./package.html?plan=romantic-kashmir">
+            <div class="pkg-img-wrap">
+              <img class="pkg-img" src="https://images.unsplash.com/photo-1564329494258-3f72215ba175?auto=format&fit=crop&w=800&q=85" alt="Dal Lake romantic Kashmir" />
+              <span class="pkg-badge">🌹 Best Seller</span>
+              <span class="pkg-duration">4N / 5D</span>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Romantic Kashmir</h3>
+              <p class="pkg-route">Srinagar → Dal Lake → Nishat Garden → Gulmarg → Pahalgam</p>
+              <div class="pkg-includes">
+                <span class="pkg-tag">🛏 Houseboat Stay</span>
+                <span class="pkg-tag">🚗 Private Transfer</span>
+                <span class="pkg-tag">🚡 Gondola Ride</span>
+                <span class="pkg-tag">🛶 Shikara Ride</span>
+              </div>
+              <span class="pkg-cta">View Day Plan →</span>
+            </div>
+          </a>
+          <a class="pkg-card" href="./package.html?plan=family-fun-tour">
+            <div class="pkg-img-wrap">
+              <img class="pkg-img" src="https://images.unsplash.com/photo-1646204892016-711ed35535ec?auto=format&fit=crop&w=800&q=85" alt="Pahalgam family Kashmir" />
+              <span class="pkg-badge">👨‍👩‍👧 Family Pick</span>
+              <span class="pkg-duration">5N / 6D</span>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Family Fun Tour</h3>
+              <p class="pkg-route">Srinagar → Dal Lake → Sonmarg → Gulmarg → Pahalgam → Kokarnag</p>
+              <div class="pkg-includes">
+                <span class="pkg-tag">🏨 3-Star Hotels</span>
+                <span class="pkg-tag">🚗 Private Transfer</span>
+                <span class="pkg-tag">🐴 Pony Rides</span>
+                <span class="pkg-tag">🌊 River Picnic</span>
+              </div>
+              <span class="pkg-cta">View Day Plan →</span>
+            </div>
+          </a>
+          <a class="pkg-card" href="./package.html?plan=snow-adventure">
+            <div class="pkg-img-wrap">
+              <img class="pkg-img" src="https://images.unsplash.com/photo-1568889753852-196c487a536e?auto=format&fit=crop&w=800&q=85" alt="Gulmarg snow adventure Kashmir" />
+              <span class="pkg-badge">❄️ Adventure</span>
+              <span class="pkg-duration">3N / 4D</span>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Snow Adventure</h3>
+              <p class="pkg-route">Srinagar → Dal Lake → Gulmarg Snow → Aharbal → Peer Ki Gali</p>
+              <div class="pkg-includes">
+                <span class="pkg-tag">🎿 Snow Sports</span>
+                <span class="pkg-tag">🚡 Gondola Phase 2</span>
+                <span class="pkg-tag">🚗 Private Transfer</span>
+                <span class="pkg-tag">🏔 Mountain Treks</span>
+              </div>
+              <span class="pkg-cta">View Day Plan →</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
     <section class="section">
@@ -280,93 +341,162 @@
         <div class="feature-tile">24/7 Support</div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="destinations">
       <h3>Explore Every Destination</h3>
       <div class="destination-grid">
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=900&q=80" alt="Pahalgam Kashmir" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1646204892016-711ed35535ec?auto=format&fit=crop&w=900&q=85" alt="Pahalgam Kashmir Valley" />
           <div class="destination-body"><strong style="font-size:22px;">Pahalgam</strong><p>Experience the beauty, culture and unforgettable views of Pahalgam.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Pahalgam">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=900&q=80" alt="Gulmarg" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1568889753852-196c487a536e?auto=format&fit=crop&w=900&q=85" alt="Gulmarg Gondola Kashmir" />
           <div class="destination-body"><strong style="font-size:22px;">Gulmarg</strong><p>Snow adventures, premium stays and breathtaking mountain scenery.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Gulmarg">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1592385704183-f1d0b37a54e3?auto=format&fit=crop&w=900&q=80" alt="Nishat Garden Srinagar" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=900&q=85" alt="Nishat Garden Dal Lake Srinagar" />
           <div class="destination-body"><strong style="font-size:22px;">Nishat Garden</strong><p>Elegant Mughal charm with peaceful views and timeless beauty.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Nishat%20Garden">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=80" alt="Sonmarg" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=900&q=85" alt="Sonmarg Meadow Kashmir" />
           <div class="destination-body"><strong style="font-size:22px;">Sonmarg</strong><p>Golden meadows, river valleys and epic mountain panoramas.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Sonmarg">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Tulip Garden Srinagar" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1490750967868-88df5691cc6f?auto=format&fit=crop&w=900&q=85" alt="Tulip Garden Srinagar Spring" />
           <div class="destination-body"><strong style="font-size:22px;">Tulip Garden</strong><p>Asia's largest tulip garden bursting with colour every spring.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Tulip%20Garden">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=80" alt="Dal Lake Srinagar" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1564329494258-3f72215ba175?auto=format&fit=crop&w=900&q=85" alt="Dal Lake Shikara Srinagar" />
           <div class="destination-body"><strong style="font-size:22px;">Dal Lake</strong><p>Iconic shikara rides, floating markets and serene houseboat stays.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Dal%20Lake">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80" alt="Betab Valley Pahalgam" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1694368906488-aa07d406696e?auto=format&fit=crop&w=900&q=85" alt="Betab Valley Pahalgam Green Meadow" />
           <div class="destination-body"><strong style="font-size:22px;">Betab Valley</strong><p>Lush green valley named after the Bollywood classic, stunning scenery.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Betab%20Valley">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Kokarnag Kashmir" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1706287027786-c6478176fedd?auto=format&fit=crop&w=900&q=85" alt="Kokarnag Springs Garden Kashmir" />
           <div class="destination-body"><strong style="font-size:22px;">Kokarnag</strong><p>Famous for its natural springs, rose gardens and trout fisheries.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Kokarnag">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1520962880247-cfaf541c8724?auto=format&fit=crop&w=900&q=80" alt="Verinag Kashmir" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1600845747913-e33543f94892?auto=format&fit=crop&w=900&q=85" alt="Verinag Spring Mughal Garden" />
           <div class="destination-body"><strong style="font-size:22px;">Verinag</strong><p>Historic Mughal spring garden, source of the Jhelum river.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Verinag">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Doodhpathri Kashmir" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1701957494296-a42832ab0a17?auto=format&fit=crop&w=900&q=85" alt="Doodhpathri Valley of Milk Kashmir" />
           <div class="destination-body"><strong style="font-size:22px;">Doodhpathri</strong><p>The Valley of Milk — pristine alpine meadows with milky streams.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Doodhpathri">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=900&q=80" alt="Gurez Valley Kashmir" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1707804770720-d151605e5161?auto=format&fit=crop&w=900&q=85" alt="Gurez Valley Kishanganga River Kashmir" />
           <div class="destination-body"><strong style="font-size:22px;">Gurez Valley</strong><p>Remote, untouched valley with dramatic peaks and Dard culture.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Gurez%20Valley">Explore</a></div>
         </div>
         <div class="soft-card" style="padding:0;display:block;">
-          <img class="destination-image" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80" alt="Aharbal Waterfall Mughal Road" />
+          <img class="destination-image" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=85" alt="Aharbal Waterfall Mughal Road Kashmir" />
           <div class="destination-body"><strong style="font-size:22px;">Aharbal Waterfall</strong><p>The Niagara of Kashmir on the scenic Mughal Road, breathtaking falls.</p><a class="explore-link" target="_blank" rel="noopener noreferrer" href="./destination.html?destination=Aharbal%20Waterfall">Explore</a></div>
         </div>
       </div>
     </section>
-    <section class="section section-dark">
-      <div class="section">
-        <h3>Customer Reviews</h3>
-        <div class="review-grid">
-          <div class="review-tile"><div class="review-body">Amazing trip and smooth service!</div></div>
-          <div class="review-tile"><div class="review-body">Best honeymoon package ever.</div></div>
-          <div class="review-tile"><div class="review-body">Trusted team and great hotels.</div></div>
+    <style>
+      .reviews-section { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 72px 0; }
+      .reviews-inner { width: var(--page-width); margin: 0 auto; }
+      .reviews-eyebrow { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.28em; text-transform: uppercase; color: #fbbf24; background: rgba(251,191,36,0.12); padding: 6px 14px; border-radius: 999px; margin-bottom: 14px; }
+      .reviews-title { margin: 0 0 8px; font-family: "Times New Roman", serif; font-size: clamp(28px, 3vw, 44px); font-weight: 700; color: white; }
+      .reviews-subtitle { color: rgba(255,255,255,0.55); font-size: 15px; margin: 0 0 48px; }
+      .review-grid-new { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; }
+      .review-card-new { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s, box-shadow 0.2s; }
+      .review-card-new:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,0.3); }
+      .review-stars { display: flex; gap: 3px; }
+      .review-star { color: #fbbf24; font-size: 17px; }
+      .review-text { color: rgba(255,255,255,0.88); font-size: 15px; line-height: 1.75; font-style: italic; flex: 1; }
+      .review-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 16px; }
+      .review-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, #fbbf24, #d7a62b); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; color: #111; flex-shrink: 0; }
+      .review-name { font-weight: 700; color: white; font-size: 14px; }
+      .review-loc { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
+      .reviews-trust { display: flex; align-items: center; justify-content: center; gap: 32px; margin-top: 48px; flex-wrap: wrap; }
+      .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.65); font-size: 13px; font-weight: 600; }
+      .trust-icon { font-size: 20px; }
+      @media (max-width: 920px) { .review-grid-new { grid-template-columns: 1fr; } .reviews-trust { gap: 18px; } }
+    </style>
+    <section class="reviews-section">
+      <div class="reviews-inner">
+        <span class="reviews-eyebrow">★ Verified Travellers</span>
+        <h2 class="reviews-title">What Our Guests Say</h2>
+        <p class="reviews-subtitle">Real reviews from people who travelled Kashmir with us</p>
+        <div class="review-grid-new">
+          <div class="review-card-new">
+            <div class="review-stars"><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span></div>
+            <p class="review-text">"The whole trip was seamless from start to finish. Dal Lake at sunrise from the houseboat is something I will never forget. Kashmir Dream Holidays arranged everything perfectly."</p>
+            <div class="review-author"><div class="review-avatar">A</div><div><div class="review-name">Arjun Mehta</div><div class="review-loc">Mumbai · Honeymoon Trip</div></div></div>
+          </div>
+          <div class="review-card-new">
+            <div class="review-stars"><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span></div>
+            <p class="review-text">"Best family holiday we have ever taken. The kids loved the Gulmarg gondola and pony rides in Pahalgam. The team was always available on WhatsApp which gave us real peace of mind."</p>
+            <div class="review-author"><div class="review-avatar">S</div><div><div class="review-name">Sunita Kapoor</div><div class="review-loc">Delhi · Family Tour</div></div></div>
+          </div>
+          <div class="review-card-new">
+            <div class="review-stars"><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span></div>
+            <p class="review-text">"Trusted local team, great hotels and the itinerary was exactly what we asked for. Sonmarg was breathtaking. Highly recommend Kashmir Dream Holidays to anyone planning a Kashmir trip."</p>
+            <div class="review-author"><div class="review-avatar">R</div><div><div class="review-name">Rahul &amp; Priya</div><div class="review-loc">Bangalore · Couple Trip</div></div></div>
+          </div>
+        </div>
+        <div class="reviews-trust">
+          <div class="trust-item"><span class="trust-icon">✅</span> 500+ Happy Travellers</div>
+          <div class="trust-item"><span class="trust-icon">🏨</span> Verified Hotel Partners</div>
+          <div class="trust-item"><span class="trust-icon">📞</span> 24/7 Support</div>
+          <div class="trust-item"><span class="trust-icon">🔒</span> Secure Booking</div>
+          <div class="trust-item"><span class="trust-icon">🌟</span> 5-Star Rated Service</div>
         </div>
       </div>
     </section>
-    <section class="section">
-      <h3>Travel Blog</h3>
-      <div class="blog-grid">
-        <a class="blog-tile" href="./blog.html?post=gulmarg-best-time">
-          <div class="blog-body">
-            <strong>Best Time to Visit Gulmarg</strong>
-            <p>Read seasonal travel tips, weather ideas and local planning advice.</p>
-            <span class="blog-read">Read Photo Guide</span>
-          </div>
-        </a>
-        <a class="blog-tile" href="./blog.html?post=top-10-srinagar">
-          <div class="blog-body">
-            <strong>Top 10 Things in Srinagar</strong>
-            <p>Houseboats, gardens, food, shopping and scenic local experiences.</p>
-            <span class="blog-read">Read Photo Guide</span>
-          </div>
-        </a>
-        <a class="blog-tile" href="./blog.html?post=why-kashmir-is-paradise">
-          <div class="blog-body">
-            <strong>Why Kashmir is Paradise</strong>
-            <p>Discover what makes the valley unforgettable for couples and families.</p>
-            <span class="blog-read">Read Photo Guide</span>
-          </div>
-        </a>
+    <style>
+      .blog-section { width: 100%; padding: 72px 0; background: #f8fafc; }
+      .blog-inner { width: var(--page-width); margin: 0 auto; }
+      .blog-eyebrow { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.28em; text-transform: uppercase; color: #b45309; background: #fef3c7; padding: 6px 14px; border-radius: 999px; margin-bottom: 14px; }
+      .blog-heading { margin: 0 0 8px; font-family: "Times New Roman", serif; font-size: clamp(28px, 3vw, 44px); font-weight: 700; color: #0f172a; }
+      .blog-subhead { color: #64748b; margin: 0 0 44px; font-size: 15px; }
+      .blog-grid-new { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; }
+      .blog-card-new { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 28px rgba(15,23,42,0.08); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.22s, box-shadow 0.22s; }
+      .blog-card-new:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(15,23,42,0.14); }
+      .blog-card-img { width: 100%; height: 220px; object-fit: cover; display: block; }
+      .blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+      .blog-card-tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: #b45309; background: #fef3c7; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+      .blog-card-title { margin: 0 0 10px; font-size: 20px; font-weight: 700; color: #0f172a; line-height: 1.3; }
+      .blog-card-desc { color: #475569; font-size: 14px; line-height: 1.7; flex: 1; margin: 0 0 18px; }
+      .blog-card-read { display: inline-flex; align-items: center; gap: 6px; color: #b45309; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-top: auto; }
+      @media (max-width: 920px) { .blog-grid-new { grid-template-columns: 1fr; } }
+    </style>
+    <section class="blog-section" id="blog">
+      <div class="blog-inner">
+        <span class="blog-eyebrow">✦ Kashmir Guides</span>
+        <h2 class="blog-heading">Travel Blog</h2>
+        <p class="blog-subhead">Photo-rich guides to help you plan your perfect Kashmir trip</p>
+        <div class="blog-grid-new">
+          <a class="blog-card-new" href="./blog.html?post=gulmarg-best-time">
+            <img class="blog-card-img" src="https://images.unsplash.com/photo-1568889753852-196c487a536e?auto=format&fit=crop&w=800&q=85" alt="Gulmarg gondola Kashmir" />
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Seasonal Guide</span>
+              <h3 class="blog-card-title">Best Time to Visit Gulmarg</h3>
+              <p class="blog-card-desc">Season-by-season advice for snow lovers, honeymooners and summer travelers — know exactly when to go.</p>
+              <span class="blog-card-read">Read Guide →</span>
+            </div>
+          </a>
+          <a class="blog-card-new" href="./blog.html?post=top-10-srinagar">
+            <img class="blog-card-img" src="https://images.unsplash.com/photo-1564329494258-3f72215ba175?auto=format&fit=crop&w=800&q=85" alt="Dal Lake shikara Srinagar" />
+            <div class="blog-card-body">
+              <span class="blog-card-tag">City Guide</span>
+              <h3 class="blog-card-title">Top 10 Things in Srinagar</h3>
+              <p class="blog-card-desc">Houseboats, Dal Lake, Mughal gardens, local food, shopping and the experiences visitors remember most.</p>
+              <span class="blog-card-read">Read Guide →</span>
+            </div>
+          </a>
+          <a class="blog-card-new" href="./blog.html?post=why-kashmir-is-paradise">
+            <img class="blog-card-img" src="https://images.unsplash.com/photo-1646204892016-711ed35535ec?auto=format&fit=crop&w=800&q=85" alt="Kashmir valley Pahalgam" />
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Travel Inspiration</span>
+              <h3 class="blog-card-title">Why Kashmir is Paradise</h3>
+              <p class="blog-card-desc">Discover what makes the valley unforgettable — for couples, families and first-time travelers alike.</p>
+              <span class="blog-card-read">Read Guide →</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
     <section class="section-cta">
@@ -378,8 +508,26 @@
     </section>
     <footer class="footer">
       <div class="footer-grid">
-        <div><h3 style="margin:0 0 8px;">Kashmir Dream Holidays</h3><p style="margin:0;color:#cbd5e1;">www.kashmirdreamholidays.com</p></div>
-        <div><p style="margin:0 0 8px;">Phone: <a href="tel:+917006886108" style="color:#fbbf24;text-decoration:none;">+91 70068 86108</a></p><p style="margin:0;">Email: info@kashmirdreamholidays.com</p></div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+            <img src="./logo_kashmir.png" alt="Kashmir Dream Holidays" style="height:56px;width:auto;border-radius:8px;" />
+            <h3 style="margin:0;font-size:18px;">Kashmir Dream Holidays</h3>
+          </div>
+          <p style="margin:0 0 12px;color:#cbd5e1;">www.kashmirdreamholidays.com</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="https://www.instagram.com/kashmir_dream_holidays_?utm_source=qr&igsh=NTZlazNqZWpzZWtr" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white;font-weight:700;font-size:13px;padding:9px 16px;border-radius:12px;text-decoration:none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+            <a href="https://wa.me/917006886108" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;background:#25d366;color:white;font-weight:700;font-size:13px;padding:9px 16px;border-radius:12px;text-decoration:none;">💬 WhatsApp</a>
+            <a href="tel:+917006886108" style="display:inline-flex;align-items:center;gap:7px;background:#3b82f6;color:white;font-weight:700;font-size:13px;padding:9px 16px;border-radius:12px;text-decoration:none;">📞 Call Us</a>
+          </div>
+        </div>
+        <div>
+          <p style="margin:0 0 8px;">Phone: <a href="tel:+917006886108" style="color:#fbbf24;text-decoration:none;">+91 70068 86108</a></p>
+          <p style="margin:0 0 8px;">Email: info@kashmirdreamholidays.com</p>
+          <p style="margin:0;color:#64748b;font-size:13px;">© 2025 Kashmir Dream Holidays. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   </body>
