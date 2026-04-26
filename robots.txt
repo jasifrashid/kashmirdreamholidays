@@ -4,7 +4,7 @@ Disallow: /admin
 Disallow: /private
 
 # Sitemap
-Sitemap: https://jasifrashid.github.io/kashmirdreamholidays/sitemap.xml
+Sitemap: https://www.kashmirdreamholidays.com/sitemap.xml
 
 # Crawler instructions
 User-agent: Googlebot
