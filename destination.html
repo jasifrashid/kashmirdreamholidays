@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Destination Media</title>
+    <title>Kashmir Destinations | Pahalgam, Gulmarg, Dal Lake, Sonmarg & More — Kashmir Dream Holidays</title>
+    <meta name="description" content="Explore Kashmir destinations — Pahalgam, Gulmarg, Dal Lake, Sonmarg, Tulip Garden, Betab Valley and more. Photos, history and travel highlights for every place."/>
+    <meta name="keywords" content="Kashmir destinations, Pahalgam photos, Gulmarg gondola, Dal Lake Srinagar, Sonmarg Kashmir, Nishat Bagh garden, Betab Valley, Kokarnag springs, Doodhpathri, Gurez Valley, Aharbal Waterfall"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://jasifrashid.github.io/kashmirdreamholidays/destination.html"/>
     <style>
       :root { --gold-1: #fff7cf; --gold-2: #f8dc88; --gold-3: #d7a62b; --gold-4: #a76f00; --page-width: min(1280px, calc(100% - 32px)); --bg: #f8fafc; --ink: #0f172a; }
       * { box-sizing: border-box; }
@@ -109,13 +113,14 @@
         "Nishat Garden": {
           heroImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Nishat_Bagh%2C_Srinagar.jpg/1280px-Nishat_Bagh%2C_Srinagar.jpg",
           subtitle: "A Mughal garden experience with terraces, water channels and Dal Lake views.",
-          history: "Nishat Bagh was laid out in 1633 during the Mughal era by Asif Khan, elder brother of Empress Noor Jahan. Its twelve terraced design, flowing water channels and chinar-lined symmetry make it one of Srinagar's most iconic garden spaces, overlooking Dal Lake with Zabarwan mountains as its backdrop.",
+          history: "Nishat Bagh was laid out in 1633 during the Mughal era by Asif Khan, elder brother of Empress Noor Jahan. Its twelve terraced design, flowing water channels and chinar-lined symmetry make it one of Srinagar\'s most iconic garden spaces, overlooking Dal Lake with Zabarwan mountains as its backdrop.",
           highlights: ["Twelve terraced Mughal landscaping and central water cascade", "Dal Lake views framed by ancient chinar trees", "Stone walkways, lawns and floral beds for photography", "Peaceful evening strolls with Zabarwan mountain backdrops"],
           photos: [
-            { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Nishat_Bagh%2C_Srinagar.jpg/1280px-Nishat_Bagh%2C_Srinagar.jpg", name: "Nishat Bagh Srinagar" },
-            { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nishat_Bagh_2.jpg/1280px-Nishat_Bagh_2.jpg", name: "Nishat Garden Terraces" },
-            { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Dal_Lake_Srinagar.jpg/1280px-Dal_Lake_Srinagar.jpg", name: "Dal Lake from Garden" },
-            { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Shikara_Dal_Lake.jpg/1280px-Shikara_Dal_Lake.jpg", name: "Dal Lake Shikara" },
+            { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Nishat_Bagh%2C_Srinagar.jpg/1280px-Nishat_Bagh%2C_Srinagar.jpg", name: "Nishat Bagh Garden Srinagar" },
+            { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nishat_Bagh_2.jpg/1280px-Nishat_Bagh_2.jpg", name: "Nishat Bagh Terraces" },
+            { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Nishat_Bagh_fountains.jpg/1280px-Nishat_Bagh_fountains.jpg", name: "Nishat Bagh Fountains" },
+            { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Nishat_Bagh_chinar_trees.jpg/1280px-Nishat_Bagh_chinar_trees.jpg", name: "Nishat Bagh Chinar Trees" },
+            { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Nishat_Bagh%2C_Srinagar.jpg/640px-Nishat_Bagh%2C_Srinagar.jpg", name: "Nishat Garden Dal Lake Backdrop" },
           ],
         },
         "Sonmarg": {
@@ -347,31 +352,12 @@
       };
 
       const loadGallery = async () => {
-        // Load built-in photos immediately — no waiting
+        // Use only built-in curated photos — no Supabase uploads
         const builtIn = (details.photos || []).map((p) => ({ name: p.name, kind: "image", src: p.src }));
         currentMedia = builtIn;
         currentIndex = 0;
         status.hidden = true;
         renderSlider();
-
-        // Then try to merge any uploaded media from Supabase on top
-        try {
-          const query = new URLSearchParams({
-            select: "id,destination,file_name,media_type,public_url,file_path,created_at",
-            destination: `eq.${destination}`,
-            order: "created_at.desc",
-          });
-          const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${TABLE_NAME}?${query.toString()}`, { headers: authHeaders });
-          if (response.ok) {
-            const data = await safeJson(response);
-            const uploaded = (data || []).map((item) => ({ id: item.id, name: item.file_name, kind: item.media_type, src: item.public_url }));
-            if (uploaded.length > 0) {
-              currentMedia = [...uploaded, ...builtIn];
-              currentIndex = 0;
-              renderSlider();
-            }
-          }
-        } catch (_) { /* silently ignore — built-in photos already showing */ }
       };
 
       window.addEventListener("error", (event) => {
