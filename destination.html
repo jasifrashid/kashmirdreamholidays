@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kashmir Destinations Guide 2025 | Pahalgam, Gulmarg, Dal Lake, Sonmarg & More — Kashmir Dream Holidays</title>
-    <meta name="description" content="Explore 12 best Kashmir destinations with photos & travel tips — Pahalgam, Gulmarg, Dal Lake, Sonmarg, Nishat Garden, Tulip Garden, Betab Valley, Doodhpathri, Gurez Valley, Aharbal Waterfall. Plan your Kashmir trip 2025."/>
+    <title>Kashmir Destinations Guide 2025 | Pahalgam, Gulmarg, Dal Lake, Sonmarg and More - Kashmir Dream Holidays</title>
+    <meta name="description" content="Explore 12 best Kashmir destinations with photos and travel tips - Pahalgam, Gulmarg, Dal Lake, Sonmarg, Nishat Garden, Tulip Garden, Betab Valley, Doodhpathri, Gurez Valley, and Aharbal Waterfall. Plan your Kashmir trip 2025."/>
     <meta name="keywords" content="Kashmir destinations, Pahalgam tour, Gulmarg gondola, Dal Lake shikara, Sonmarg meadow, Nishat Bagh, Tulip Garden Srinagar, Betab Valley, Kokarnag springs, Verinag, Doodhpathri, Gurez Valley, Aharbal waterfall, Kashmir travel guide 2025"/>
     <meta name="author" content="Kashmir Dream Holidays"/>
     <meta name="robots" content="index, follow, max-image-preview:large"/>
@@ -16,7 +16,7 @@
       :root { --gold-1: #fff7cf; --gold-2: #f8dc88; --gold-3: #d7a62b; --gold-4: #a76f00; --page-width: min(1280px, calc(100% - 32px)); --bg: #f8fafc; --ink: #0f172a; }
       * { box-sizing: border-box; }
       body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Segoe UI", sans-serif; }
-      .hero { position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(2, 6, 23, 0.96), rgba(30, 41, 59, 0.92)), url("https://commons.wikimedia.org/wiki/Special:FilePath/Shikara%20Dal%20Lake.jpg") center/cover; color: white; }
+      .hero { position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(2, 6, 23, 0.96), rgba(30, 41, 59, 0.92)), url("./assets/places/shikara-dal-lake.jpg") center/cover; color: white; }
       .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2, 6, 23, 0.92), rgba(146, 64, 14, 0.18)); }
       .shell, .section { position: relative; z-index: 1; width: var(--page-width); margin: 0 auto; }
       .hero-inner { padding: 28px 0 56px; }
@@ -89,157 +89,154 @@
       const hero = document.querySelector(".hero");
       const destinationDetails = {
         "Pahalgam": {
-          heroImage: "https://images.unsplash.com/photo-1646204892016-711ed35535ec?auto=format&fit=crop&w=1600&q=90",
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Pahalgam%2C%20Kashmir.jpg",
           subtitle: "A river valley retreat known for pine forests, mountain air and easy scenic day trips.",
           history: "Pahalgam is often called the Valley of Shepherds. It grew from a quiet pastoral settlement into one of Kashmir's best loved hill destinations because of its river landscapes, alpine meadows and access to trekking routes.",
-          highlights: ["Lidder River viewpoints and riverside walks", "Betaab Valley for open meadows and film-famous scenery", "Aru Valley for mountain views and pony rides", "Baisaran, often called Mini Switzerland"],
+          highlights: ["Lidder River viewpoints and riverside walks", "Betab Valley for open meadows and film-famous scenery", "Aru Valley for mountain views and pony rides", "Baisaran, often called Mini Switzerland"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1646204892016-711ed35535ec?auto=format&fit=crop&w=1400&q=85", name: "Pahalgam Valley Kashmir" },
-            { src: "https://images.unsplash.com/photo-1701957494338-95527b753a7f?auto=format&fit=crop&w=1400&q=85", name: "Pahalgam Mountains" },
-            { src: "https://images.unsplash.com/photo-1668173443752-bdec2fbb3c79?auto=format&fit=crop&w=1400&q=85", name: "Pahalgam River" },
-            { src: "https://images.unsplash.com/photo-1694368906488-aa07d406696e?auto=format&fit=crop&w=1400&q=85", name: "Betaab Valley near Pahalgam" },
-            { src: "https://images.unsplash.com/photo-1646204892016-711ed35535ec?auto=format&fit=crop&w=1400&q=80", name: "Pahalgam Green Fields" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pahalgam%2C%20Kashmir.jpg", name: "Pahalgam Valley" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pahalgam%20Valley%20View.jpg", name: "Pahalgam Valley View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pahalgam%20view%20of%20the%20valley.jpg", name: "Pahalgam Hillside View" },
+            { src: "./assets/places/betab-valley-pahalgam.jpg", name: "Betab Valley Near Pahalgam" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pahalgam%2C%20Kashmir.jpg", name: "Pahalgam Riverside Landscape" },
           ],
         },
         "Gulmarg": {
-          heroImage: "https://images.unsplash.com/photo-1651509094074-e8acaeb84d8f?auto=format&fit=crop&w=1600&q=90",
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Gulmarg%2C%20Kashmir.jpg",
           subtitle: "A high-altitude escape famous for snow, gondola rides and broad meadow views.",
           history: "Gulmarg means Meadow of Flowers. It became a popular royal summer retreat and later developed into one of India's best known mountain and ski destinations because of its slopes, cool weather and panoramic Himalayan setting.",
           highlights: ["Gulmarg Gondola ride toward Apharwat Peak", "Snow play and winter adventure areas", "Wide meadow walks and summer flower fields", "Golf course and old-world hill station atmosphere"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1651509094074-e8acaeb84d8f?auto=format&fit=crop&w=1400&q=85", name: "Gulmarg Ski Lift Kashmir" },
-            { src: "https://images.unsplash.com/photo-1568889753852-196c487a536e?auto=format&fit=crop&w=1400&q=85", name: "Gulmarg Gondola Cable Car" },
-            { src: "https://images.unsplash.com/photo-1637558929744-024c00b06075?auto=format&fit=crop&w=1400&q=85", name: "Gulmarg Snow Adventure" },
-            { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1400&q=85", name: "Gulmarg Snow Mountains" },
-            { src: "https://images.unsplash.com/photo-1568889753852-196c487a536e?auto=format&fit=crop&w=900&q=80", name: "Gulmarg Cable Car Wide" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gulmarg%2C%20Kashmir.jpg", name: "Gulmarg Panorama" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gulmarg%20kashmir.jpg", name: "Gulmarg Meadows" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/GulMarg%20Kashmir.jpg", name: "Gulmarg Snow Slopes" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gulmarg%20%2C%20Jammu%20%26%20Kashmir.jpg", name: "Gulmarg Mountain View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gulmarg%2C%20Kashmir.jpg", name: "Gulmarg Wide Landscape" },
           ],
         },
         "Nishat Garden": {
-          heroImage: "https://images.unsplash.com/photo-1592385704183-f1d0b37a54e3?auto=format&fit=crop&w=1600&q=90",
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Nishat%20Bagh%2C%20Srinagar.jpg",
           subtitle: "A Mughal garden experience with terraces, water channels and Dal Lake views.",
-          history: "Nishat Bagh was laid out in 1633 during the Mughal era by Asif Khan, elder brother of Empress Noor Jahan. Its twelve terraced design, flowing water channels and chinar-lined symmetry make it one of Srinagar\'s most iconic garden spaces, overlooking Dal Lake with Zabarwan mountains as its backdrop.",
+          history: "Nishat Bagh was laid out in 1633 during the Mughal era by Asif Khan, elder brother of Empress Noor Jahan. Its twelve terraced design, flowing water channels and chinar-lined symmetry make it one of Srinagar's most iconic garden spaces, overlooking Dal Lake with Zabarwan mountains as its backdrop.",
           highlights: ["Twelve terraced Mughal landscaping and central water cascade", "Dal Lake views framed by ancient chinar trees", "Stone walkways, lawns and floral beds for photography", "Peaceful evening strolls with Zabarwan mountain backdrops"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1592385704183-f1d0b37a54e3?auto=format&fit=crop&w=1400&q=85", name: "Nishat Bagh Mughal Garden" },
-            { src: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=1400&q=85", name: "Mughal Garden Terraces" },
-            { src: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1400&q=85", name: "Garden Pathways" },
-            { src: "https://images.unsplash.com/photo-1587583484525-66d34b1d34ab?auto=format&fit=crop&w=1400&q=85", name: "Garden Architecture" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nishat%20Bagh%2C%20Srinagar.jpg", name: "Nishat Bagh Main Terrace" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nishat%20Bagh%20Srinagar%2001.jpg", name: "Nishat Bagh Garden Walk" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nishat%20Bagh%20Srinagar%2002.jpg", name: "Nishat Bagh Cascade" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nishat%20Bagh%20Srinagar%2003.jpg", name: "Nishat Bagh Chinar View" },
           ],
         },
         "Sonmarg": {
-          heroImage: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1600&q=90",
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Sonamarg%20%28Kashmir%29.jpg",
           subtitle: "A dramatic mountain gateway of meadows, glaciers and river scenery.",
           history: "Sonmarg, the Meadow of Gold, has long been known as a scenic stop on the old routes deeper into the Himalayas. Its rivers, glaciers and open alpine surroundings make it one of Kashmir's most striking summer landscapes.",
           highlights: ["Thajiwas Glacier excursion and snow views", "Sindh River scenery and riverside stops", "High meadow panoramas and mountain photography", "Day trips toward Baltal and nearby alpine points"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1400&q=85", name: "Sonmarg Horse Meadow Kashmir" },
-            { src: "https://images.unsplash.com/photo-1701957494296-a42832ab0a17?auto=format&fit=crop&w=1400&q=85", name: "Sonmarg Green Field" },
-            { src: "https://images.unsplash.com/photo-1639647383258-abee94a76f84?auto=format&fit=crop&w=1400&q=85", name: "Sonmarg Mountain Lake" },
-            { src: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=900&q=80", name: "Sonmarg Meadow Mountains" },
-            { src: "https://images.unsplash.com/photo-1701957494296-a42832ab0a17?auto=format&fit=crop&w=900&q=80", name: "Sonmarg River Valley" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sonamarg%20%28Kashmir%29.jpg", name: "Sonmarg Main Meadow" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sonamarg%20in%20Kashmir.jpg", name: "Sonmarg Glacier Valley" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sonamarg%2C%20Kashmir.jpg", name: "Sonmarg Mountain View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sonamarg%20%28Kashmir%29.jpg", name: "Sonmarg River Meadow" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sonamarg%20in%20Kashmir.jpg", name: "Sonmarg Scenic Road" },
           ],
         },
         "Tulip Garden": {
-          heroImage: "https://images.unsplash.com/photo-1490750967868-88df5691cc6f?auto=format&fit=crop&w=1600&q=90",
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Indira%20Gandhi%20Memorial%20Tulip%20Garden%2C%20Srinagar.jpg",
           subtitle: "Asia's largest tulip garden, ablaze with colour every spring on the slopes of Zabarwan.",
           history: "The Indira Gandhi Memorial Tulip Garden was established in 2007 to boost tourism and floriculture in Kashmir. Spread across seven terraces on the foothills of Zabarwan mountain, it overlooks Dal Lake and blooms with over 1.5 million tulips of more than 60 varieties each March and April.",
           highlights: ["Over 1.5 million tulips across 60+ varieties in spring", "Seven terraced levels with stunning Dal Lake backdrop", "Spring Tulip Festival with cultural performances", "Zabarwan mountain views and nature walks nearby"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1490750967868-88df5691cc6f?auto=format&fit=crop&w=1400&q=85", name: "Tulip Garden Kashmir Spring" },
-            { src: "https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?auto=format&fit=crop&w=1400&q=85", name: "Colourful Tulip Fields" },
-            { src: "https://images.unsplash.com/photo-1523693916666-5574b28b3a74?auto=format&fit=crop&w=1400&q=85", name: "Tulip Spring Bloom" },
-            { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=85", name: "Tulip Colours Garden" },
-            { src: "https://images.unsplash.com/photo-1490750967868-88df5691cc6f?auto=format&fit=crop&w=900&q=80", name: "Tulip Garden Overview" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Indira%20Gandhi%20Memorial%20Tulip%20Garden%2C%20Srinagar.jpg", name: "Tulip Garden Main Terrace" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tulip%20Garden%20Srinagar.jpg", name: "Tulip Garden Srinagar" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20and%20Yellow%20Tulips.JPG", name: "Tulip Bloom Close View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tulip%20Garden%2C%20Kashmir.jpg", name: "Tulip Garden Wide View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tulip%20Garden%20Srinagar.jpg", name: "Tulip Festival Walkway" },
           ],
         },
         "Dal Lake": {
-          heroImage: "https://images.unsplash.com/photo-1564329494258-3f72215ba175?auto=format&fit=crop&w=1600&q=90",
-          subtitle: "The iconic heart of Srinagar — shikara rides, floating markets and houseboat stays.",
+          heroImage: "./assets/places/dal-lake-shikara.jpg",
+          subtitle: "The iconic heart of Srinagar - shikara rides, floating markets and houseboat stays.",
           history: "Dal Lake has been the soul of Srinagar for centuries. Its floating gardens, called Radhs, have fed the city for generations. Mughal emperors camped on its shores, and today it remains Kashmir's most photographed landmark, known for its wooden houseboats, shikara boats and the timeless rhythm of life on the water.",
           highlights: ["Shikara rides at sunrise and sunset", "Floating vegetable and flower markets at dawn", "Overnight houseboat stays with lake views", "Nehru Park island and Char Chinar island visits"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1564329494258-3f72215ba175?auto=format&fit=crop&w=1400&q=85", name: "Dal Lake Shikara Ride" },
-            { src: "https://images.unsplash.com/photo-1715457573748-8e8a70b2c1be?auto=format&fit=crop&w=1400&q=85", name: "Dal Lake Boats" },
-            { src: "https://images.unsplash.com/photo-1641910389345-5a30d4c01d90?auto=format&fit=crop&w=1400&q=85", name: "Dal Lake Boat Autumn" },
-            { src: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1400&q=85", name: "Dal Lake Houseboat" },
-            { src: "https://images.unsplash.com/photo-1564329494258-3f72215ba175?auto=format&fit=crop&w=900&q=80", name: "Dal Lake Morning" },
+            { src: "./assets/places/shikara-dal-lake.jpg", name: "Dal Lake Shikara Ride" },
+            { src: "./assets/places/dal-lake-shikara.jpg", name: "Dal Lake Morning Water" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dal%20lake%2CSrinagar.jpg", name: "Dal Lake Houseboats" },
+            { src: "./assets/places/shikara-dal-lake.jpg", name: "Dal Lake Sunset Ride" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dal%20lake%2CSrinagar.jpg", name: "Dal Lake Srinagar View" },
           ],
         },
         "Betab Valley": {
-          heroImage: "https://images.unsplash.com/photo-1694368906488-aa07d406696e?auto=format&fit=crop&w=1600&q=90",
+          heroImage: "./assets/places/betab-valley-pahalgam.jpg",
           subtitle: "A lush green valley near Pahalgam, famous for Bollywood films and alpine scenery.",
           history: "Betab Valley takes its name from the 1983 Bollywood film Betaab, which was shot in this location. Sitting at around 2,400 metres in the Lidder Valley, it is known for its dense pine and fir forests, clear rivers and open meadows that draw visitors for picnics and nature walks.",
           highlights: ["Open green meadows perfect for picnics and photography", "Lidder River flowing through the valley floor", "Dense pine and fir forest trails", "Scenic gateway for trekking toward Chandanwari"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1694368906488-aa07d406696e?auto=format&fit=crop&w=1400&q=85", name: "Betaab Valley Pahalgam Green" },
-            { src: "https://images.unsplash.com/photo-1701957494338-95527b753a7f?auto=format&fit=crop&w=1400&q=85", name: "Betab Valley Mountains" },
-            { src: "https://images.unsplash.com/photo-1668173443752-bdec2fbb3c79?auto=format&fit=crop&w=1400&q=85", name: "Betab Valley River" },
-            { src: "https://images.unsplash.com/photo-1646204892016-711ed35535ec?auto=format&fit=crop&w=1400&q=85", name: "Betab Valley Field" },
-            { src: "https://images.unsplash.com/photo-1694368906488-aa07d406696e?auto=format&fit=crop&w=900&q=80", name: "Betab Valley Meadow" },
+            { src: "./assets/places/betab-valley-pahalgam.jpg", name: "Betab Valley Main View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Betab%20Valley.jpg", name: "Betab Valley Meadow" },
+            { src: "./assets/places/betab-valley-pahalghamthe-valley-of-shepherds.jpg", name: "Betab Valley Riverside" },
+            { src: "./assets/places/betab-valley-pahalgam.jpg", name: "Betab Valley Forest Edge" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Betab%20Valley.jpg", name: "Betab Valley Open Field" },
           ],
         },
         "Kokarnag": {
-          heroImage: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=90",
-          subtitle: "Kashmir's garden of springs — famous for roses, trout and peaceful natural beauty.",
+          heroImage: "./assets/places/botanical-garden-kokernag.jpg",
+          subtitle: "Kashmir's garden of springs - famous for roses, trout and peaceful natural beauty.",
           history: "Kokarnag, situated in the Anantnag district, is known as the garden of springs. Its natural spring water is considered among the purest in Kashmir and has fed the area's famous trout fisheries for generations. The beautifully maintained gardens, rose parks and cool stream-side walks make it a beloved escape.",
           highlights: ["Natural freshwater springs and scenic waterways", "Rose garden with hundreds of varieties in bloom", "Trout fishing in clear, cold streams", "Peaceful forest walks and family picnic spots"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Kokarnag Springs Garden" },
-            { src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1400&q=85", name: "Kokarnag Forest Stream" },
-            { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85", name: "Kokarnag Garden Pathway" },
-            { src: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1400&q=85", name: "Kokarnag Rose Garden" },
-            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80", name: "Kokarnag Forest" },
+            { src: "./assets/places/botanical-garden-kokernag.jpg", name: "Kokarnag Botanical Garden" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kokernag%2C%20Jammu%20and%20Kashmir.jpg", name: "Kokarnag Spring Waterways" },
+            { src: "./assets/places/architect-of-building-botanical-garden-kokernag-jammu-and-kashmir.jpg", name: "Kokarnag Garden Pavilion" },
+            { src: "./assets/places/botanical-garden-kokernag.jpg", name: "Kokarnag Garden Walk" },
           ],
         },
         "Verinag": {
-          heroImage: "https://images.unsplash.com/photo-1600845747913-e33543f94892?auto=format&fit=crop&w=1600&q=90",
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Mughal%20Spring%2C%20Verinag%2C%20Kashmir.jpg",
           subtitle: "A serene Mughal garden at the source of the mighty Jhelum river.",
           history: "Verinag is home to one of Kashmir's most historically important natural springs, believed to be the origin of the Jhelum river. Emperor Jahangir was so captivated by it that he built an octagonal stone basin and garden around the spring in the early 17th century. The surrounding garden and clear blue pool remain largely unchanged.",
           highlights: ["Historic octagonal spring pool built by Emperor Jahangir", "Source of the Jhelum river and crystal-clear spring water", "Mughal-era garden terraces and stone architecture", "Tranquil setting ideal for quiet walks and reflection"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1600845747913-e33543f94892?auto=format&fit=crop&w=1400&q=85", name: "Verinag Garden Spring" },
-            { src: "https://images.unsplash.com/photo-1564329494258-3f72215ba175?auto=format&fit=crop&w=1400&q=85", name: "Verinag Water Source" },
-            { src: "https://images.unsplash.com/photo-1592385704183-f1d0b37a54e3?auto=format&fit=crop&w=1400&q=85", name: "Verinag Mughal Garden" },
-            { src: "https://images.unsplash.com/photo-1600845747913-e33543f94892?auto=format&fit=crop&w=900&q=80", name: "Verinag Octagonal Pool" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mughal%20Spring%2C%20Verinag%2C%20Kashmir.jpg", name: "Verinag Mughal Spring" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Verinag%20spring%20and%20Mughal%20garden%2C%20verinag%20Kashmir.jpg", name: "Verinag Garden View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Full%20view%20verinag%20spring.jpg", name: "Verinag Full Spring View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Main%20source%20verinag%20spring.jpg", name: "Verinag Source Pool" },
           ],
         },
         "Doodhpathri": {
-          heroImage: "https://images.unsplash.com/photo-1706287027786-c6478176fedd?auto=format&fit=crop&w=1600&q=90",
-          subtitle: "The Valley of Milk — pristine alpine meadows with milky white streams and wildflowers.",
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Forests%20of%20Doodhpathri%2CJammu%20%26%20Kashmir.jpg",
+          subtitle: "The Valley of Milk - pristine alpine meadows with milky white streams and wildflowers.",
           history: "Doodhpathri, meaning Valley of Milk, gets its name from the white, frothy streams that rush through its meadows, so fast and foamy they resemble flowing milk. Located in Budgam district at around 2,700 metres, it remains largely untouched and is one of Kashmir's best kept secrets for nature lovers.",
           highlights: ["Milky white rushing streams and alpine river crossings", "Wildflower-carpeted meadows in summer", "Dense fir and pine forests for nature walks", "Picnic spots with sweeping valley panoramas"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1706287027786-c6478176fedd?auto=format&fit=crop&w=1400&q=85", name: "Doodhpathri Green Meadow" },
-            { src: "https://images.unsplash.com/photo-1707804770720-d151605e5161?auto=format&fit=crop&w=1400&q=85", name: "Doodhpathri Valley Road" },
-            { src: "https://images.unsplash.com/photo-1693999024492-8598a389ac7d?auto=format&fit=crop&w=1400&q=85", name: "Doodhpathri Horses" },
-            { src: "https://images.unsplash.com/photo-1701957494296-a42832ab0a17?auto=format&fit=crop&w=1400&q=85", name: "Doodhpathri Mountains" },
-            { src: "https://images.unsplash.com/photo-1706287027786-c6478176fedd?auto=format&fit=crop&w=900&q=80", name: "Valley of Milk" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Forests%20of%20Doodhpathri%2CJammu%20%26%20Kashmir.jpg", name: "Doodhpathri Forest Meadow" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Doodhpathri%20-%20A%20dirt%20road%20goes%20through%20the%20many%20meadows%20southwest%20Jammu%20Kashmir%20India.jpg", name: "Doodhpathri Meadow Road" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/River%20stream%20near%20Doodhpathri%20southwest%20Jammu%20Kashmir%20India.jpg", name: "Doodhpathri Stream" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Forests%20of%20Doodhpathri%2CJammu%20%26%20Kashmir.jpg", name: "Doodhpathri Valley View" },
           ],
         },
         "Gurez Valley": {
-          heroImage: "https://images.unsplash.com/photo-1701957494338-95527b753a7f?auto=format&fit=crop&w=1600&q=90",
+          heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Gurez%20Valley%2004.jpg",
           subtitle: "A remote, untouched valley with dramatic peaks, the Kishanganga river and rich Dard heritage.",
           history: "Gurez Valley sits close to the Line of Control and remained restricted for decades, which preserved its extraordinary natural beauty and unique Dard Shin culture. The valley is overlooked by Habba Khatoon Peak, named after Kashmir's beloved 16th-century poetess, and is crossed by the turquoise Kishanganga river.",
           highlights: ["Kishanganga river with dramatic gorge scenery", "Habba Khatoon Peak and mountain photography", "Traditional Dard Shin wooden architecture villages", "Offbeat trekking routes and untouched alpine landscapes"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1701957494338-95527b753a7f?auto=format&fit=crop&w=1400&q=85", name: "Gurez Valley Kashmir Mountains" },
-            { src: "https://images.unsplash.com/photo-1668173443752-bdec2fbb3c79?auto=format&fit=crop&w=1400&q=85", name: "Gurez River Valley" },
-            { src: "https://images.unsplash.com/photo-1651509094074-e8acaeb84d8f?auto=format&fit=crop&w=1400&q=85", name: "Gurez Snow Peaks" },
-            { src: "https://images.unsplash.com/photo-1707804770720-d151605e5161?auto=format&fit=crop&w=1400&q=85", name: "Gurez Valley Landscape" },
-            { src: "https://images.unsplash.com/photo-1701957494338-95527b753a7f?auto=format&fit=crop&w=900&q=80", name: "Gurez Mountain View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gurez%20Valley%2004.jpg", name: "Gurez Valley Panorama" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gurez%20Valley%2001.jpg", name: "Gurez Valley River View" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gurez%20Valley%2009.jpg", name: "Gurez Mountain Village" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gurez%20Valley%2010.jpg", name: "Gurez Valley Wide Landscape" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gurez%20Valley%2004.jpg", name: "Gurez Scenic View" },
           ],
         },
         "Aharbal Waterfall": {
-          heroImage: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1600&q=90",
-          subtitle: "The Niagara of Kashmir — a powerful waterfall on the scenic Mughal Road.",
+          heroImage: "./assets/places/aharbal-waterfall-kashmir.jpg",
+          subtitle: "The Niagara of Kashmir - a powerful waterfall on the scenic Mughal Road.",
           history: "Aharbal Waterfall, often called the Niagara of Kashmir, is formed by the Vishav river plunging about 25 metres over a rocky cliff in the Kulgam district. Sitting along the historic Mughal Road that once connected Kashmir to the plains, it is surrounded by dense forests and mountain views that make it one of the valley's most dramatic natural attractions.",
           highlights: ["25-metre waterfall with powerful mist and roar", "Scenic Mughal Road drive through mountain passes", "Dense pine forest walks and picnic spots", "Trout fishing in the Vishav river below the falls"],
           photos: [
-            { src: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1400&q=85", name: "Aharbal Waterfall Kashmir" },
-            { src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1400&q=85", name: "Aharbal Forest Waterfall" },
-            { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=85", name: "Aharbal Pine Forest" },
-            { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=85", name: "Aharbal Mughal Road" },
-            { src: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=900&q=80", name: "Aharbal Niagara Kashmir" },
+            { src: "./assets/places/aharbal-waterfall-kashmir.jpg", name: "Aharbal Waterfall Main View" },
+            { src: "./assets/places/aharbal-waterfalls-kashmir.jpg", name: "Aharbal Waterfall Gorge" },
+            { src: "https://commons.wikimedia.org/wiki/Special:FilePath/Waterfall%20of%20Aharbal.JPG", name: "Aharbal Waterfall Close View" },
+            { src: "./assets/places/aharbal-falls-a-closer-view.jpg", name: "Aharbal Falls Near View" },
           ],
         },
       };
@@ -271,7 +268,7 @@
       };
 
       const details = destinationDetails[destination] || {
-        heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Shikara%20Dal%20Lake.jpg",
+        heroImage: "./assets/places/shikara-dal-lake.jpg",
         subtitle: `Visitors can watch photos and short videos from ${destination} here in a clean slideshow.`,
         history: `${destination} is one of Kashmir's scenic highlights, known for memorable natural views and visitor experiences.`,
         highlights: [
